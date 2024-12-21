@@ -35,9 +35,9 @@ const itemAnimation: Variants = {
 
 const columnClasses = {
   1: 'grid-cols-1',
-  2: 'grid-cols-1 lg:grid-cols-2',
-  3: 'grid-cols-1 lg:grid-cols-3',
-  4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+  2: 'grid-cols-1 sm:grid-cols-2',
+  3: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+  4: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
 };
 
 // 每隔多少个项目插入一个广告
@@ -78,7 +78,7 @@ const WebNavCardList = React.memo(({
         elements.push(
           <LazyWrapper key={`ad-${index}`} rootMargin="100px">
             <motion.div variants={itemAnimation}>
-              <AdPlacement />
+              <AdPlacement className="mt-2 sm:mt-0" />
             </motion.div>
           </LazyWrapper>
         );
@@ -91,7 +91,11 @@ const WebNavCardList = React.memo(({
   return (
     <AnimatePresence>
       <Wrapper
-        className={cn(`grid gap-5 ${columnClasses[columns]}`, className)}
+        className={cn(
+          `grid gap-4 sm:gap-5 lg:gap-6 ${columnClasses[columns]}`,
+          'px-0.5 sm:px-0',  // 添加小边距防止阴影被裁剪
+          className
+        )}
         variants={container}
         initial="hidden"
         animate="show"

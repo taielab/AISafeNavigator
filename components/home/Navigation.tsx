@@ -25,22 +25,21 @@ export default function Navigation() {
   return (
     <>
       <header className='sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-lg'>
-        <div className='mx-auto flex h-16 max-w-pc items-center justify-between px-3 lg:px-0'>
+        <div className='mx-auto flex h-14 sm:h-16 max-w-pc items-center justify-between px-3 lg:px-0'>
           {/* Logo */}
-          <Link href='/' className='flex items-center gap-10'>
+          <Link href='/' className='flex items-center'>
             <Image
               src='/images/aiseckit-logo-black.png'
               alt='AisecKit Logo'
-              width={140}
-              height={140}
-              className='size-30 object-contain'
+              width={120}
+              height={120}
+              className='w-[100px] sm:w-[120px] object-contain'
               priority
             />
-            {/* <span className='text-xl font-bold text-gray-900'>AisecKit</span> */}
           </Link>
 
           {/* Right Section: Navigation + LocaleSwitcher */}
-          <div className='flex items-center gap-6'>
+          <div className='flex items-center gap-2 sm:gap-4 lg:gap-6'>
             {/* Desktop Navigation */}
             <nav className='hidden lg:block'>
               <ul className='flex items-center gap-6'>
@@ -68,7 +67,7 @@ export default function Navigation() {
             <button
               type='button'
               onClick={() => setOpen(true)}
-              className='rounded-lg p-2 text-gray-500 hover:bg-gray-100 lg:hidden'
+              className='rounded-lg p-1.5 sm:p-2 text-gray-500 hover:bg-gray-100 lg:hidden'
               aria-label='Open menu'
             >
               <Menu className='size-5' />

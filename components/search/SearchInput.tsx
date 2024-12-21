@@ -95,8 +95,8 @@ const SearchInput = React.memo(({
           }}
           placeholder={t('placeholder')}
           className={cn(
-            'h-12 w-full rounded-xl bg-white pl-12 pr-12',
-            'text-base text-gray-900 placeholder:text-gray-400',
+            'h-10 sm:h-12 w-full rounded-lg sm:rounded-xl bg-white pl-10 sm:pl-12 pr-10 sm:pr-12',
+            'text-sm sm:text-base text-gray-900 placeholder:text-gray-400',
             'border border-gray-200',
             'transition-shadow duration-200',
             'hover:shadow-md',
@@ -110,17 +110,17 @@ const SearchInput = React.memo(({
             handleSubmit();
           }}
           className={cn(
-            'absolute left-4 top-1/2 -translate-y-1/2',
+            'absolute left-3 sm:left-4 top-1/2 -translate-y-1/2',
             'text-gray-400 transition-colors duration-200',
             'hover:text-gray-600'
           )}
           aria-label={t('search')}
         >
-          <Search className='size-5' aria-hidden="true" />
+          <Search className='size-4 sm:size-5' aria-hidden="true" />
         </button>
         {isLoading ? (
           <Spinning
-            className='absolute right-4 top-1/2 -translate-y-1/2'
+            className='absolute right-3 sm:right-4 top-1/2 -translate-y-1/2'
             size='sm'
             color='primary'
           />
@@ -129,13 +129,13 @@ const SearchInput = React.memo(({
             type='button'
             onClick={clearSearch}
             className={cn(
-              'absolute right-4 top-1/2 -translate-y-1/2',
+              'absolute right-3 sm:right-4 top-1/2 -translate-y-1/2',
               'text-gray-400 transition-colors duration-200',
               'hover:text-gray-500'
             )}
             aria-label={t('clear')}
           >
-            <X className='size-5' />
+            <X className='size-4 sm:size-5' />
           </button>
         )}
       </div>

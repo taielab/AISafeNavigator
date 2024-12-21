@@ -60,14 +60,14 @@ const WebNavCard = React.memo(({
   return (
     <motion.article 
       className={cn(
-        'flex h-[210px] flex-col gap-3 rounded-xl bg-white p-1 shadow-soft lg:h-[343px]',
+        'flex h-auto min-h-[180px] sm:min-h-[210px] flex-col gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-white p-1 shadow-soft lg:min-h-[343px]',
         'transition-all duration-200',
         className
       )}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      <Link href={`/ai/${name}`} title={title} className='group relative'>
+      <Link href={`/ai/${name}`} title={title} className='group relative flex-shrink-0'>
         <BaseImage
           src={thumbnail_url || ''}
           alt={title}
@@ -77,23 +77,23 @@ const WebNavCard = React.memo(({
           priority={priority}
           loading={priority ? 'eager' : 'lazy'}
           className={cn(
-            'aspect-[310/174] w-full rounded-xl bg-white/40',
+            'aspect-[16/9] w-full rounded-lg sm:rounded-xl bg-white/40',
             'transition-all duration-300',
             isHovered && 'opacity-70 scale-[1.02]'
           )}
           lowQualitySrc={lowQualityImageUrl}
         />
         <motion.div 
-          className='absolute inset-0 z-10 flex items-center justify-center gap-1 rounded-xl bg-black/50 text-xl text-white'
+          className='absolute inset-0 z-10 flex items-center justify-center gap-1 rounded-lg sm:rounded-xl bg-black/50 text-base sm:text-xl text-white'
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          {t('checkDetail')} <CircleArrowRight className='size-4' />
+          {t('checkDetail')} <CircleArrowRight className='size-3.5 sm:size-4' />
         </motion.div>
       </Link>
-      <div className='flex flex-col px-[6px] space-y-2'>
-        <div className='flex items-start justify-between gap-2'>
+      <div className='flex flex-col flex-grow px-1.5 sm:px-[6px] space-y-1.5 sm:space-y-2'>
+        <div className='flex items-start justify-between gap-1.5 sm:gap-2'>
           <a 
             href={url} 
             title={title} 
@@ -103,7 +103,7 @@ const WebNavCard = React.memo(({
           >
             <h3 
               className={cn(
-                'text-sm font-bold lg:text-base',
+                'text-xs sm:text-sm font-bold lg:text-base',
                 'text-gray-900',
                 'transition-colors duration-200 group-hover:text-primary',
                 'break-words line-clamp-2'
@@ -117,15 +117,15 @@ const WebNavCard = React.memo(({
             title={title} 
             target='_blank' 
             rel='nofollow noopener noreferrer' 
-            className='text-gray-500 hover:text-primary flex-shrink-0'
+            className='text-gray-500 hover:text-primary flex-shrink-0 mt-0.5'
             aria-label={`Visit ${title}`}
           >
-            <SquareArrowOutUpRight className='size-5 transition-transform duration-200 hover:scale-110' />
+            <SquareArrowOutUpRight className='size-4 sm:size-5 transition-transform duration-200 hover:scale-110' />
           </a>
         </div>
         <p 
           className={cn(
-            'text-xs text-gray-600 lg:text-sm',
+            'text-[10px] sm:text-xs text-gray-600 lg:text-sm',
             'break-words',
             `line-clamp-${maxLines}`
           )}
