@@ -1,0 +1,33 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "jsx-quotes": ["error", "double"],
+    "no-trailing-spaces": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "eol-last": "off",
+    "arrow-parens": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unstable-nested-components": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/destructuring-assignment": "off",
+    "react/state-in-constructor": "off",
+    "react/button-has-type": "off",
+    "react/no-array-index-key": "off",
+    "import/prefer-default-export": "off",
+    "import/order": "off",
+    "import/no-duplicates": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/alt-text": "off",
+    "@next/next/no-img-element": "off",
+    "no-console": "warn",
+    "prefer-const": "warn",
+    "prefer-destructuring": "off",
+    "no-nested-ternary": "off",
+    "no-plusplus": "off",
+    "no-promise-executor-return": "off",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
+}

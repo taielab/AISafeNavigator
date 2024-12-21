@@ -1,0 +1,251 @@
+{
+  "Common": {
+    "loading": "Lädt...",
+    "explore": "Entdecken",
+    "empty": "Keine Daten",
+    "share": "Teilen",
+    "shareOptions": {
+      "title": "Teilen",
+      "twitter": "Auf Twitter teilen",
+      "facebook": "Auf Facebook teilen",
+      "linkedin": "Auf LinkedIn teilen",
+      "whatsapp": "Auf WhatsApp teilen",
+      "telegram": "Auf Telegram teilen",
+      "copyLink": "Link kopieren"
+    },
+    "copy": {
+      "success": "Link in die Zwischenablage kopiert",
+      "failed": "Kopieren fehlgeschlagen"
+    },
+    "scrollToTop": "Nach oben scrollen",
+    "pagination": "Seitennavigation",
+    "pagination.previous": "Vorherige Seite",
+    "pagination.next": "Nächste Seite",
+    "image": {
+      "loading": "Bild wird geladen",
+      "loadError": "Bild konnte nicht geladen werden",
+      "fallback": "Standardbild",
+      "icon": "Symbol"
+    }
+  },
+  "Search": {
+    "placeholder": "KI-Tools suchen...",
+    "search": "Suchen",
+    "clear": "Suche löschen",
+    "history": "Suchverlauf",
+    "suggestions": "Suchvorschläge",
+    "noHistory": "Kein Suchverlauf",
+    "noSuggestions": "Keine Vorschläge gefunden"
+  },
+  "Navigation": {
+    "title": "AISecKit - Verzeichnis für KI-Sicherheits- und Penetrationstesting-Tools",
+    "discover": "KI entdecken",
+    "submit": "Einreichen",
+    "newtools": "Neue Tools",
+    "startup": "Startup",
+    "menu": "Menü",
+    "visitWebsite": "Website besuchen"
+  },
+  "Footer": {
+    "title": "AISecKit - Verzeichnis für KI-Sicherheits- und Penetrationstesting-Tools | Ihre ultimative KI-Sicherheits-Toolbox",
+    "subTitle": "Entdecken Sie die besten KI-Sicherheits- und Penetrationstesting-Tools. Erkunden Sie Tutorials, Rezensionen und Top-Tools für Cybersecurity-Experten.",
+    "support": "Support",
+    "privacy": "Datenschutzrichtlinie",
+    "termsConditions": "Nutzungsbedingungen",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "Faq": {
+    "title": "Häufig gestellte Fragen",
+    "1": {
+      "question": "Was ist das AI Security Toolkit Directory?",
+      "answer": "Das AI Security Toolkit Directory - aiseckit.com baut ein Verzeichnis für AI Security Toolkits auf, um Ihnen zu helfen, Ihre bevorzugte KI-Sicherheits-Toolbox zu finden. Hier finden Sie KI-Sicherheitstools, KI-Penetrationstesting-Tools, KI-Cybersecurity-Tools, KI-Ethical-Hacking-Tools, KI-gestützte Schwachstellenscanner, KI-Automatisierte Sicherheitstests und vieles mehr."
+    },
+    "2": {
+      "question": "Wie kann ich meine KI-Tools im AI Security Toolkit Directory finden?",
+      "answer-1": "1. Öffnen Sie aiseckit.com.",
+      "answer-2": "2. Durchsuchen Sie KI-Tools im AI Security Toolkit Directory.",
+      "answer-3": "3. Klicken Sie auf das KI-Tool, über das Sie mehr erfahren und das Sie besuchen möchten."
+    },
+    "3": {
+      "question": "Was sind die Hauptmerkmale des AI Security Toolkit Directory?",
+      "answer-1": "1. Kostenloses AI Security Toolkit Directory: Finden Sie hier kostenlos Ihre bevorzugten KI-Tools.",
+      "answer-2": "2. Startup-Liste: Kostenlose Startup-Liste für KI-Tool-Entwickler."
+    },
+    "4": {
+      "question": "Ist das Einreichen von KI-Tools im AI Security Toolkit Directory kostenlos?",
+      "answer": "Ja, es ist jetzt kostenlos. Sie sollten jedoch einen Backlink für das AI Security Toolkit Directory teilen!"
+    },
+    "5": {
+      "question": "Welche KI-Toolkits werden vom AI Security Toolkit Directory unterstützt?",
+      "answer": "Wir werden später verschiedene KI-Tools unterstützen. Bitte haben Sie ein paar Tage Geduld."
+    },
+    "6": {
+      "question": "Wie oft werden KI-Sicherheitstools im AI Security Toolkit Directory aktualisiert?",
+      "answer": "Die Liste der KI-Tools wird täglich aktualisiert."
+    },
+    "7": {
+      "question": "Werden GPT-4o oder Sora AI hier unterstützt?",
+      "answer": "Sie finden hier die GPT-4o- oder Sora-KI-Tools. Hier gibt es Einführungen über GPT-4o und Sora-Videos und Sie können die Website dieser Tools besuchen."
+    },
+    "8": {
+      "question": "Fehlerbehebung",
+      "answer": "Wenn der Inhalt nicht angezeigt wird, versuchen Sie es mit einem anderen Browser, löschen Sie Ihren Cache. Wenn das Problem weiterhin besteht, kontaktieren Sie uns bitte über aiseckit@gmail.com."
+    },
+    "9": {
+      "question": "Wie werden die Inhalte des AI Security Toolkit Directory generiert?",
+      "answer": "Die Beschreibungsinhalte der KI-Tools werden von GPT-4o von OpenAI generiert."
+    },
+    "10": {
+      "question": "Was ist das Nutzungsrecht von KI-Tools?",
+      "answer": "AISecKit | Your Ultimate AI Security Toolkit ist lediglich ein KI-Verzeichnis von KI-Sicherheitstoolkits. Das Nutzungsrecht von KI-Sicherheitstoolkits basiert auf der Website des KI-Sicherheitstoolkits."
+    },
+    "11": {
+      "question": "Ist der Code des AI Security Toolkit Directory Open Source?",
+      "answer": "Ja, wir werden den Code der AI Security Toolkit Nav Site auf Github (https://github.com/taielab) open-sourcen. Bitte geben Sie uns einen Stern."
+    }
+  },
+  "FooterNavigation": {
+    "privacyPolicy": {
+      "1-h1": "Datenschutzrichtlinie von AISecKit | Ihre ultimative KI-Sicherheits-Toolbox",
+      "1-p": "Diese Seite dient dazu, Besucher über meine Richtlinien zur Erhebung, Verwendung und Offenlegung personenbezogener Daten zu informieren, wenn sich jemand entscheidet, meinen Dienst zu nutzen. Wenn Sie meinen Dienst nutzen, erklären Sie sich mit der Erhebung und Verwendung von Informationen in Bezug auf diese Richtlinie einverstanden. Die von mir erhobenen personenbezogenen Daten werden zur Bereitstellung und Verbesserung des Dienstes verwendet. Ich werde Ihre Daten nicht verwenden oder an Dritte weitergeben, außer wie in dieser Datenschutzrichtlinie beschrieben. Die in dieser Datenschutzrichtlinie verwendeten Begriffe haben die gleiche Bedeutung wie in unseren Allgemeinen Geschäftsbedingungen.",
+      "2-h2": "1. Erhebung und Nutzung von Informationen",
+      "2-p": "Für eine bessere Erfahrung kann ich Sie bei der Nutzung unseres Dienstes auffordern, uns bestimmte personenbezogene Daten mitzuteilen. Die von mir angeforderten Informationen werden auf Ihrem Gerät gespeichert und von mir in keiner Weise erhoben. Die App verwendet jedoch Dienste von Drittanbietern, die Informationen zur Identifizierung Ihrer Person sammeln können.",
+      "3-h2": "2. Protokolldaten",
+      "3-p": "Ich möchte Sie darüber informieren, dass ich jedes Mal, wenn Sie meinen Dienst nutzen, im Falle eines Fehlers in der App Daten und Informationen auf Ihrem Telefon, sogenannte Protokolldaten, über Produkte von Drittanbietern sammle. Diese Protokolldaten können Informationen wie die Internetprotokolladresse ('IP') Ihres Geräts, den Gerätenamen, die Betriebssystemversion, die Konfiguration der App bei der Nutzung meines Dienstes, die Uhrzeit und das Datum Ihrer Nutzung des Dienstes sowie andere Statistiken enthalten.",
+      "4-h2": "3. Cookies",
+      "4-p": "Cookies sind Dateien mit einer geringen Datenmenge, die üblicherweise als anonyme eindeutige Kennungen verwendet werden. Diese werden von den von Ihnen besuchten Websites an Ihren Browser gesendet und im internen Speicher Ihres Geräts gespeichert. Dieser Dienst verwendet diese „Cookies“ nicht explizit. Die App kann jedoch Code und Bibliotheken von Drittanbietern verwenden, die „Cookies“ verwenden, um Informationen zu sammeln und ihre Dienste zu verbessern. Sie haben die Möglichkeit, diese Cookies entweder zu akzeptieren oder abzulehnen und zu erfahren, wann ein Cookie an Ihr Gerät gesendet wird. Wenn Sie unsere Cookies ablehnen, können Sie möglicherweise einige Teile dieses Dienstes nicht nutzen.",
+      "5-h2": "4. Dienstanbieter",
+      "5-p-1": "Ich kann aus folgenden Gründen Drittunternehmen und Einzelpersonen einsetzen:",
+      "5-li-1": "Um unseren Dienst zu erleichtern;",
+      "5-li-2": "Um den Dienst in unserem Namen bereitzustellen;",
+      "5-li-3": "Um dienstbezogene Dienste zu erbringen;",
+      "5-li-4": "Um uns bei der Analyse der Nutzung unseres Dienstes zu unterstützen;",
+      "5-p-2": "Ich möchte die Benutzer dieses Dienstes darüber informieren, dass diese Drittparteien Zugriff auf Ihre personenbezogenen Daten haben. Der Grund dafür ist, die ihnen in unserem Namen zugewiesenen Aufgaben zu erfüllen. Sie sind jedoch verpflichtet, die Informationen nicht offenzulegen oder für andere Zwecke zu verwenden.",
+      "6-h2": "5. Sicherheit",
+      "6-p": "Ich schätze Ihr Vertrauen in die Bereitstellung Ihrer personenbezogenen Daten an uns und bemühe mich daher, diese mit wirtschaftlich akzeptablen Mitteln zu schützen. Denken Sie jedoch daran, dass keine Methode der Übertragung über das Internet oder der elektronischen Speicherung 100% sicher und zuverlässig ist und ich deren absolute Sicherheit nicht garantieren kann.",
+      "7-h2": "6. Links zu anderen Websites",
+      "7-p": "Dieser Dienst kann Links zu anderen Websites enthalten. Wenn Sie auf einen Link eines Drittanbieters klicken, werden Sie zu dieser Website weitergeleitet. Beachten Sie, dass diese externen Websites nicht von mir betrieben werden. Daher empfehle ich Ihnen dringend, die Datenschutzrichtlinie dieser Websites zu überprüfen. Ich habe keine Kontrolle über und übernehme keine Verantwortung für den Inhalt, die Datenschutzrichtlinien oder Praktiken von Websites oder Diensten Dritter.",
+      "8-h2": "7. Änderungen an dieser Datenschutzrichtlinie",
+      "8-p": "Ich kann meine Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Daher wird Ihnen empfohlen, diese Seite regelmäßig auf Änderungen zu überprüfen. Ich werde Sie über alle Änderungen informieren, indem ich die neue Datenschutzrichtlinie auf dieser Seite veröffentliche. Diese Änderungen werden sofort wirksam, nachdem sie auf dieser Seite veröffentlicht wurden."
+    },
+    "termsConditions": {
+      "1-h1": "Nutzungsbedingungen für AISecKit | Ihr ultimatives Verzeichnis für KI-Sicherheits-Toolkits",
+      "1-p": "Willkommen im AISecKit-Verzeichnis! Unsere Website unter https://aiseckit.com ('Website') hat es sich zur Aufgabe gemacht, Ihnen die Funktionalität zum Erstellen benutzerdefinierter Bilder zu bieten. Durch den Zugriff auf oder die Nutzung unserer Website erklären Sie sich mit diesen Nutzungsbedingungen ('Bedingungen') einverstanden. Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, ist es Ihnen untersagt, die Website zu nutzen.",
+      "2-h2": "1. Nutzungslizenz",
+      "2-p": "Ihnen wird eine beschränkte, nicht exklusive, nicht übertragbare Lizenz zur Nutzung der Website und ihrer Dienste für den persönlichen, nicht kommerziellen Gebrauch gewährt. Diese Lizenz beinhaltet nicht das Recht, den Inhalt der Website zu reproduzieren, zu ändern oder zu verbreiten oder ihn ohne unsere schriftliche Zustimmung für kommerzielle Zwecke zu verwenden.",
+      "3-h2": "2. Eigentum",
+      "3-p": "Das Eigentum an den durch Text auf der Website generierten Bildern gehört der Person, die das Bild erstellt hat. aiseckit.com beansprucht kein Eigentum an Bildern, die von Benutzern erstellt wurden.",
+      "4-h2": "3. Erhebung von Benutzerdaten",
+      "4-p": "Ich erhebe personenbezogene Daten (Name, E-Mail und Zahlungsinformationen) und nicht personenbezogene Daten (Web-Cookies), um unsere Dienste zu verbessern. Die Verwendung dieser Daten unterliegt unserer Datenschutzrichtlinie, die Sie unter folgender Adresse finden:",
+      "terms-of-service": "Nutzungsbedingungen",
+      "5-h2": "4. Geltendes Recht",
+      "5-p": "Diese Bedingungen unterliegen den Gesetzen der Vereinigten Staaten von Amerika und werden in Übereinstimmung mit diesen ausgelegt, ohne Rücksicht auf deren Kollisionsnormen.",
+      "6-h2": "5. Änderungen der Bedingungen",
+      "6-p": "Das AI Security Toolkit Directory behält sich das Recht vor, diese Bedingungen jederzeit nach eigenem Ermessen zu ändern und zu ersetzen. Wir werden die Benutzer über alle Änderungen per E-Mail benachrichtigen. Ihre fortgesetzte Nutzung der Website nach etwaigen Änderungen dieser Bedingungen stellt Ihre Zustimmung zu solchen Änderungen dar.",
+      "7-h2": "6. Kontaktinformationen",
+      "7-p": "Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter aiseckit@gmail.com.",
+      "last-p": "Durch die Nutzung von AISecKit | Your Ultimate AI Security Toolkit Directory erklären Sie sich mit diesen Nutzungsbedingungen einverstanden."
+    }
+  },
+  "NotFound": {
+    "metadata": {
+      "title": "Seite nicht gefunden | {siteName}",
+      "description": "Die von Ihnen gesuchte Seite existiert leider nicht oder wurde entfernt.",
+      "keywords": "404, Seite nicht gefunden, Fehlerseite, kann nicht zugreifen"
+    },
+    "title": "Seite nicht gefunden",
+    "description": "Die von Ihnen gesuchte Seite existiert leider nicht oder wurde entfernt.",
+    "goHome": "Zur Startseite",
+    "suggestions": {
+      "title": "Vorschläge",
+      "check": "Überprüfen Sie, ob die von Ihnen eingegebene URL korrekt ist",
+      "refresh": "Aktualisieren Sie die Seite und löschen Sie Ihren Browser-Cache",
+      "contact": "Wenn das Problem weiterhin besteht, kontaktieren Sie bitte unser Support-Team"
+    }
+  },
+  "Home": {
+    "title": "AISecKit - Verzeichnis für KI-Sicherheits- und Penetrationstesting-Tools",
+    "subTitle": "Entdecken Sie die besten KI-Sicherheits-Penetrationstesting-Tools. Erkunden Sie Tutorials, Rezensionen und Top-Tools für Cybersecurity-Experten.",
+    "ai-navigate": "KI-Sicherheitstool",
+    "exploreMore": "Weitere KI-Tools erhalten",
+    "checkDetail": "Details prüfen",
+    "search": "Suchen",
+    "result": "Suchergebnis",
+    "empty": "Keine Daten verfügbar"
+  },
+  "Category": {
+    "home": "Startseite",
+    "explore": "Entdecken",
+    "search": "Suchen",
+    "category": "Kategorie",
+    "tools": "Werkzeuge",
+    "empty": "Keine Daten",
+    "collapseCategory": "Kategorie ausblenden",
+    "expandCategory": "Kategorie erweitern"
+  },
+  "Submit": {
+    "title": "Reichen Sie Ihre KI-Tools ein",
+    "subTitle": "Reichen Sie Ihr KI-Tool ein und erhalten Sie Traffic vom AISecKit-Verzeichnis",
+    "website": "Website-Name",
+    "url": "Website-URL",
+    "submit": "Einreichen",
+    "add": "Hinzufügen",
+    "text": "auf Ihrer Website-Startseite, dann können Sie Ihre Website kostenlos erfolgreich einreichen!",
+    "networkError": "Netzwerkfehler",
+    "success": "Erfolg"
+  },
+  "Startup": {
+    "title": "Starten Sie Ihr Unternehmen",
+    "subTitle": "Die ultimative Liste von Websites zum Starten und Bewerben Ihrer Online-Dienste. Um zur Liste hinzugefügt zu werden oder Ihr Produkt bei einer kostenlosen Liste einzureichen, senden Sie bitte eine E-Mail an: aiseckit@gmail.com.",
+    "updateTime": "Täglich aktualisiert. Letzte Aktualisierung:",
+    "table": {
+      "da": "DA",
+      "website": "Website",
+      "tags": "Tags",
+      "price": "Preis",
+      "submission": "Einreichung",
+      "visit": "Besuchen"
+    },
+    "detail": {
+      "visitWebsite": "Website besuchen",
+      "introduction": "Einführung"
+    }
+  },
+  "Explore": {
+    "title": "AISecKit - Ihre ultimative KI-Sicherheits-Toolbox",
+    "subTitle": "Entdecken Sie die besten KI-Sicherheits- und Penetrationstesting-Tools. Erkunden Sie Tutorials, Rezensionen und Top-Tools für Cybersecurity-Experten."
+  },
+  "Metadata": {
+    "home": {
+      "title": "AISecKit - Verzeichnis für KI-Sicherheits- und Penetrationstesting-Tools",
+      "description": "Entdecken Sie die besten KI-Sicherheits- und Penetrationstesting-Tools. Erkunden Sie Tutorials, Rezensionen und Top-Tools für Cybersecurity-Experten.",
+      "keywords": "KI-Sicherheitstools, Penetrationstests, Schwachstellenscanner, KI-automatisierte Sicherheitstests, beste KI-Sicherheitstools für Unternehmen, kostenlose Penetrationstesting-Tools, KI-gestützte Cybersicherheitstools, Open-Source-Cybersicherheitslösungen, automatisierte KI-Schwachstellenscanner-Tools, wie man KI in Penetrationstests verwendet"
+    },
+    "ai": {
+      "title": "AISecKit Verzeichnis",
+      "titleSubfix": "AISecKit Verzeichnis"
+    },
+    "explore": {
+      "title": "AISecKit - Verzeichnis für KI-Sicherheits- und Penetrationstesting-Tools",
+      "titlePrefix": "AISecKit Entdecken",
+      "titleSuffix": "AISecKit Verzeichnis",
+      "description": "Entdecken Sie die besten KI-Sicherheits- und Penetrationstesting-Tools. Erkunden Sie Tutorials, Rezensionen und Top-Tools für Cybersecurity-Experten.",
+      "keywords": "KI-Sicherheitstools, KI-Bedrohungserkennung, KI-Schwachstellenscanner, Penetrationstest-Tools, KI-Ethical-Hacking-Tools, KI-Sicherheitstestautomatisierung, KI-Cloud-Sicherheitstools, KI-Container-Sicherheit, KI-Kubernetes-Sicherheitstools"
+    },
+    "submit": {
+      "title": "Reichen Sie Ihr KI-Tool ein und erhalten Sie Traffic | AISecKit Ihre ultimative KI-Sicherheits-Toolbox"
+    }
+  },
+  "error": {
+    "title": "Hoppla, etwas ist schief gelaufen",
+    "message": "Es ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut",
+    "retry": "Wiederholen",
+    "network": "Netzwerkfehler",
+    "auth": "Authentifizierungsfehler",
+    "permission": "Berechtigungsfehler",
+    "notfound": "Nicht gefunden",
+    "validation": "Validierungsfehler",
+    "server": "Serverfehler",
+    "unknown": "Fehler"
+  }
+}

@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aiseckit.com
+
+# Sitemaps
+Sitemap: https://aiseckit.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?

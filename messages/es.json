@@ -1,0 +1,251 @@
+{
+  "Common": {
+    "loading": "Cargando...",
+    "explore": "Explorar",
+    "empty": "Sin datos",
+    "share": "Compartir",
+    "shareOptions": {
+      "title": "Compartir",
+      "twitter": "Compartir en Twitter",
+      "facebook": "Compartir en Facebook",
+      "linkedin": "Compartir en LinkedIn",
+      "whatsapp": "Compartir en WhatsApp",
+      "telegram": "Compartir en Telegram",
+      "copyLink": "Copiar enlace"
+    },
+    "copy": {
+      "success": "Enlace copiado al portapapeles",
+      "failed": "Error al copiar"
+    },
+    "scrollToTop": "Desplazarse hasta arriba",
+    "pagination": "Paginación",
+    "pagination.previous": "Anterior",
+    "pagination.next": "Siguiente",
+    "image": {
+      "loading": "Cargando imagen",
+      "loadError": "Error al cargar la imagen",
+      "fallback": "Imagen predeterminada",
+      "icon": "Icono"
+    }
+  },
+  "Search": {
+    "placeholder": "Buscar herramientas de IA...",
+    "search": "Buscar",
+    "clear": "Borrar búsqueda",
+    "history": "Historial de búsqueda",
+    "suggestions": "Sugerencias de búsqueda",
+    "noHistory": "Sin historial de búsqueda",
+    "noSuggestions": "No se encontraron sugerencias"
+  },
+  "Navigation": {
+    "title": "AISecKit - Directorio de Herramientas de Seguridad de IA y Pruebas de Penetración",
+    "discover": "Descubrir IA",
+    "submit": "Enviar",
+    "newtools": "Nuevas Herramientas",
+    "startup": "Startup",
+    "menu": "Menú",
+    "visitWebsite": "Visitar sitio web"
+  },
+  "Footer": {
+    "title": "AISecKit - Directorio de Herramientas de Seguridad de IA y Pruebas de Penetración | Tu Kit de Herramientas de Seguridad de IA Definitivo",
+    "subTitle": "Descubre las mejores herramientas de seguridad de IA y pruebas de penetración. Explora tutoriales, reseñas y herramientas principales para profesionales de la ciberseguridad.",
+    "support": "Soporte",
+    "privacy": "Política de privacidad",
+    "termsConditions": "Términos y condiciones",
+    "contactUs": "Contáctanos"
+  },
+  "Faq": {
+    "title": "Preguntas frecuentes",
+    "1": {
+      "question": "¿Qué es el Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer": "El Directorio de Kits de Herramientas de Seguridad de IA - aiseckit.com está construyendo un Directorio de Kits de Herramientas de Seguridad de IA para ayudarte a encontrar tu kit de herramientas de seguridad de IA favorito. Te permite encontrar Herramientas de Seguridad de IA, Herramientas de Pruebas de Penetración de IA, Herramientas de Ciberseguridad de IA, Herramientas de Hacking Ético de IA, escáneres de vulnerabilidades impulsados por IA, pruebas de seguridad automatizadas de IA y más aquí."
+    },
+    "2": {
+      "question": "¿Cómo puedes encontrar tus herramientas de IA en el Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer-1": "1. Abre aiseckit.com.",
+      "answer-2": "2. Navega por las herramientas de IA en el Directorio de Kits de Herramientas de Seguridad de IA.",
+      "answer-3": "3. Haz clic en la herramienta de IA de la que necesites obtener detalles y visitar."
+    },
+    "3": {
+      "question": "¿Cuáles son las principales características del Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer-1": "1. Directorio gratuito de kits de herramientas de seguridad de IA: Encuentra aquí tus herramientas de IA favoritas de forma gratuita.",
+      "answer-2": "2. Lista de startups: Lista de startups gratuita para desarrolladores de herramientas de IA."
+    },
+    "4": {
+      "question": "¿Es gratuito el envío de herramientas de IA al Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer": "Sí, ahora es gratuito. ¡Pero debes compartir un enlace de retroceso para el Directorio de Kits de Herramientas de Seguridad de IA!"
+    },
+    "5": {
+      "question": "¿Cuáles son las listas de kits de herramientas de IA compatibles con el Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer": "Admitiremos varias herramientas de IA más adelante. Ten paciencia por unos días."
+    },
+    "6": {
+      "question": "¿Con qué frecuencia se actualizan las herramientas de seguridad de IA en el Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer": "La lista de herramientas de IA se actualizará diariamente"
+    },
+    "7": {
+      "question": "¿Se admite GPT-4o o Sora AI aquí?",
+      "answer": "Puedes encontrar las herramientas GPT-4o o Sora AI aquí. Aquí hay introducciones sobre GPT-4o y Sora Videos y puedes visitar el sitio web de estas herramientas."
+    },
+    "8": {
+      "question": "Solución de problemas",
+      "answer": "Si el contenido no aparece, intenta con un navegador diferente, borra tu caché. Si el problema persiste, contáctanos a través de aiseckit@gmail.com."
+    },
+    "9": {
+      "question": "¿Cómo se genera el contenido del Directorio de Kits de Herramientas de Seguridad de IA?",
+      "answer": "El contenido de la descripción de las herramientas de IA es generado por GPT-4o de OpenAI."
+    },
+    "10": {
+      "question": "¿Cuál es el derecho de uso de las herramientas de IA?",
+      "answer": "AISecKit | Tu Kit de Herramientas de Seguridad de IA Definitivo es solo un directorio de IA de Kits de Herramientas de Seguridad de IA. El derecho de uso del Kit de Herramientas de Seguridad de IA se basa en el sitio web del Kit de Herramientas de Seguridad de IA."
+    },
+    "11": {
+      "question": "¿Es el código del Directorio de Kits de Herramientas de Seguridad de IA de código abierto?",
+      "answer": "Sí, abriremos el código del sitio de navegación del Kit de Herramientas de Seguridad de IA en Github (https://github.com/taielab). Por favor, danos una estrella."
+    }
+  },
+  "FooterNavigation": {
+    "privacyPolicy": {
+      "1-h1": "Política de Privacidad de AISecKit | Tu Kit de Herramientas de Seguridad de IA Definitivo",
+      "1-p": "Esta página se utiliza para informar a los visitantes sobre mis políticas con la recopilación, uso y divulgación de Información Personal si alguien decide usar mi Servicio. Si eliges usar mi Servicio, entonces aceptas la recopilación y uso de información en relación con esta política. La Información Personal que recopilo se utiliza para proporcionar y mejorar el Servicio. No usaré ni compartiré tu información con nadie, excepto como se describe en esta Política de Privacidad. Los términos utilizados en esta Política de Privacidad tienen los mismos significados que en nuestros Términos y Condiciones.",
+      "2-h2": "1. Recopilación y Uso de Información",
+      "2-p": "Para una mejor experiencia, mientras utilizas nuestro Servicio, puedo pedirte que nos proporciones cierta información de identificación personal. La información que solicito se conservará en tu dispositivo y no la recopilo de ninguna manera. La aplicación utiliza servicios de terceros que pueden recopilar información utilizada para identificarte.",
+      "3-h2": "2. Datos de Registro",
+      "3-p": "Quiero informarte que siempre que utilices mi Servicio, en caso de un error en la aplicación, recopilo datos e información en tu teléfono llamados Datos de Registro a través de productos de terceros. Estos Datos de Registro pueden incluir información como la dirección de Protocolo de Internet ('IP') de tu dispositivo, el nombre del dispositivo, la versión del sistema operativo, la configuración de la aplicación al utilizar mi Servicio, la hora y la fecha de tu uso del Servicio y otras estadísticas.",
+      "4-h2": "3. Cookies",
+      "4-p": "Las cookies son archivos con una pequeña cantidad de datos que se utilizan comúnmente como identificadores únicos anónimos. Estos se envían a tu navegador desde los sitios web que visitas y se almacenan en la memoria interna de tu dispositivo. Este Servicio no utiliza estas 'cookies' explícitamente. Sin embargo, la aplicación puede utilizar código y bibliotecas de terceros que utilizan 'cookies' para recopilar información y mejorar sus servicios. Tienes la opción de aceptar o rechazar estas cookies y saber cuándo se envía una cookie a tu dispositivo. Si eliges rechazar nuestras cookies, es posible que no puedas utilizar algunas partes de este Servicio.",
+      "5-h2": "4. Proveedores de Servicios",
+      "5-p-1": "Puedo emplear a empresas y personas de terceros por las siguientes razones:",
+      "5-li-1": "Para facilitar nuestro Servicio;",
+      "5-li-2": "Para proporcionar el Servicio en nuestro nombre;",
+      "5-li-3": "Para realizar servicios relacionados con el Servicio;",
+      "5-li-4": "Para ayudarnos a analizar cómo se utiliza nuestro Servicio;",
+      "5-p-2": "Quiero informar a los usuarios de este Servicio que estos terceros tienen acceso a tu Información Personal. La razón es para realizar las tareas que se les asignan en nuestro nombre. Sin embargo, están obligados a no divulgar o utilizar la información para ningún otro propósito.",
+      "6-h2": "5. Seguridad",
+      "6-p": "Valoro tu confianza en proporcionarnos tu Información Personal, por lo que nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Pero recuerda que ningún método de transmisión a través de Internet o método de almacenamiento electrónico es 100% seguro y confiable, y no puedo garantizar su absoluta seguridad.",
+      "7-h2": "6. Enlaces a Otros Sitios",
+      "7-p": "Este Servicio puede contener enlaces a otros sitios. Si haces clic en un enlace de terceros, serás dirigido a ese sitio. Ten en cuenta que estos sitios externos no son operados por mí. Por lo tanto, te recomiendo que revises la Política de Privacidad de estos sitios web. No tengo control sobre ni asumo ninguna responsabilidad por el contenido, las políticas de privacidad o las prácticas de sitios o servicios de terceros.",
+      "8-h2": "7. Cambios a esta Política de Privacidad",
+      "8-p": "Puedo actualizar nuestra Política de Privacidad de tiempo en tiempo. Por lo tanto, se recomienda revisar esta página periódicamente para ver si hay algún cambio. Te notificaré de cualquier cambio publicando la nueva Política de Privacidad en esta página. Estos cambios entran en vigencia inmediatamente después de su publicación en esta página."
+    },
+    "termsConditions": {
+      "1-h1": "Términos de Servicio para AISecKit | Tu Directorio de Kits de Herramientas de Seguridad de IA Definitivo",
+      "1-p": "Bienvenido al Directorio de AISecKit.  Nuestro sitio web, ubicado en https://aiseckit.com ('Sitio web'), está dedicado a proporcionarte la funcionalidad de crear imágenes personalizadas. Al acceder o utilizar nuestro Sitio web, aceptas estar sujeto a estos Términos de Servicio ('Términos'). Si no estás de acuerdo con alguna parte de estos Términos, tienes prohibido utilizar el Sitio web.",
+      "2-h2": "1. Licencia de Uso",
+      "2-p": "Se te concede una licencia limitada, no exclusiva e intransferible para utilizar el Sitio web y sus servicios para uso personal y no comercial. Esta licencia no incluye ningún derecho a reproducir, modificar o distribuir el contenido del Sitio web o utilizarlo para fines comerciales sin nuestro consentimiento por escrito.",
+      "3-h2": "2. Propiedad",
+      "3-p": "La propiedad de las imágenes generadas por texto en el Sitio web pertenece a la persona que creó la imagen. aiseckit.com no reclama ninguna propiedad de las imágenes creadas por los usuarios.",
+      "4-h2": "3. Recopilación de Datos del Usuario",
+      "4-p": "Recopilamos datos personales (nombre, correo electrónico e información de pago) y datos no personales (cookies web) con el fin de mejorar nuestros servicios. El uso de estos datos se rige por nuestra Política de Privacidad, que se puede encontrar en:",
+      "terms-of-service": "Términos de Servicio",
+      "5-h2": "4. Ley Aplicable",
+      "5-p": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de los Estados Unidos de América, sin tener en cuenta sus disposiciones sobre conflicto de leyes.",
+      "6-h2": "5. Cambios en los Términos",
+      "6-p": "AISecKit Directory se reserva el derecho, a su entera discreción, de modificar y reemplazar estos Términos en cualquier momento. Notificaremos a los usuarios de cualquier cambio por correo electrónico.  Tu uso continuo del Sitio web después de cualquier cambio en estos Términos constituye tu aceptación de dichos cambios.",
+      "7-h2": "6. Información de Contacto",
+      "7-p": "Si tienes alguna pregunta sobre estos Términos, contáctanos en aiseckit@gmail.com.",
+      "last-p": "Al utilizar AISecKit | Tu Directorio de Kits de Herramientas de Seguridad de IA Definitivo, significas tu aceptación de estos Términos de Servicio."
+    }
+  },
+  "NotFound": {
+    "metadata": {
+      "title": "Página no encontrada | {siteName}",
+      "description": "Lo siento, la página que estás buscando no existe o ha sido eliminada.",
+      "keywords": "404, página no encontrada, página de error, no se puede acceder"
+    },
+    "title": "Página no encontrada",
+    "description": "Lo siento, la página que estás buscando no existe o ha sido eliminada.",
+    "goHome": "Ir a la página principal",
+    "suggestions": {
+      "title": "Sugerencias",
+      "check": "Comprueba que la URL que has introducido sea correcta",
+      "refresh": "Actualiza la página y borra la caché de tu navegador",
+      "contact": "Si el problema persiste, ponte en contacto con nuestro equipo de soporte."
+    }
+  },
+  "Home": {
+    "title": "AISecKit - Directorio de herramientas de seguridad de IA y pruebas de penetración",
+    "subTitle": "Descubre las mejores herramientas de pruebas de penetración de seguridad de IA. Explora tutoriales, reseñas y las mejores herramientas para profesionales de la ciberseguridad.",
+    "ai-navigate": "Herramienta de Seguridad de IA",
+    "exploreMore": "Obtener Más Herramientas de IA",
+    "checkDetail": "Ver Detalles",
+    "search": "Buscar",
+    "result": "Resultado de la Búsqueda",
+    "empty": "No hay datos disponibles"
+  },
+  "Category": {
+    "home": "Inicio",
+    "explore": "Explorar",
+    "search": "Buscar",
+    "category": "Categoría",
+    "tools": "Herramientas",
+    "empty": "Sin datos",
+    "collapseCategory": "Contraer Categoría",
+    "expandCategory": "Expandir Categoría"
+  },
+  "Submit": {
+    "title": "Envía tus herramientas de IA",
+    "subTitle": "Envía tu herramienta de IA y obtén tráfico del directorio AISecKit",
+    "website": "Nombre del sitio web",
+    "url": "URL del sitio web",
+    "submit": "Enviar",
+    "add": "Añadir",
+    "text": "a la página de inicio de tu sitio web, ¡entonces puedes enviar tu sitio web correctamente de forma gratuita!",
+    "networkError": "Error de red",
+    "success": "Éxito"
+  },
+  "Startup": {
+    "title": "Inicia tu empresa",
+    "subTitle": "La lista definitiva de sitios web para lanzar y promocionar tus servicios en línea de startup. Para agregarse a la lista o ayudar a que tu producto se envíe a una lista gratuita, envía un correo electrónico a: aiseckit@gmail.com.",
+    "updateTime": "Actualizado diariamente. Última actualización:",
+    "table": {
+      "da": "DA",
+      "website": "Sitio web",
+      "tags": "Etiquetas",
+      "price": "Precio",
+      "submission": "Envío",
+      "visit": "Visitar"
+    },
+    "detail": {
+      "visitWebsite": "Visitar Sitio Web",
+      "introduction": "Introducción"
+    }
+  },
+  "Explore": {
+    "title": "AISecKit - Tu Kit de Herramientas de Seguridad de IA Definitivo",
+    "subTitle": "Descubre las mejores herramientas de seguridad de IA y pruebas de penetración. Explora tutoriales, reseñas y herramientas principales para profesionales de la ciberseguridad."
+  },
+  "Metadata": {
+    "home": {
+      "title": "AISecKit - Directorio de Herramientas de Seguridad de IA y Pruebas de Penetración",
+      "description": "Descubre las mejores herramientas de seguridad de IA y pruebas de penetración. Explora tutoriales, reseñas y herramientas principales para profesionales de la ciberseguridad.",
+      "keywords": "herramientas de seguridad de ia, pruebas de penetración, escáner de vulnerabilidades, pruebas de seguridad automatizadas de ia, las mejores herramientas de seguridad de ia para empresas, herramientas gratuitas de pruebas de penetración, herramientas de ciberseguridad impulsadas por ia, soluciones de ciberseguridad de código abierto, herramientas automatizadas de escáner de vulnerabilidades de ia, cómo utilizar la ia en las pruebas de penetración"
+    },
+    "ai": {
+      "title": "Directorio AISecKit",
+      "titleSubfix": "Directorio AISecKit"
+    },
+    "explore": {
+      "title": "AISecKit - Directorio de Herramientas de Seguridad de IA y Pruebas de Penetración",
+      "titlePrefix": "Explorar AISecKit",
+      "titleSuffix": "Directorio AISecKit",
+      "description": "Descubre las mejores herramientas de seguridad de IA y pruebas de penetración. Explora tutoriales, reseñas y herramientas principales para profesionales de la ciberseguridad.",
+      "keywords": "herramientas de seguridad de ia, detección de amenazas de ia, escáner de vulnerabilidades de ia, herramientas de pruebas de penetración, herramientas de hacking ético de ia, automatización de pruebas de seguridad de ia, herramientas de seguridad en la nube de ia, seguridad de contenedores de ia, herramientas de seguridad de kubernetes de ia"
+    },
+    "submit": {
+      "title": "Envía tu herramienta de IA y obtén tráfico | AISecKit Tu Kit de Herramientas de Seguridad de IA Definitivo"
+    }
+  },
+  "error": {
+    "title": "Uy, algo salió mal",
+    "message": "Se ha producido un error, inténtalo de nuevo más tarde",
+    "retry": "Reintentar",
+    "network": "Error de red",
+    "auth": "Error de autenticación",
+    "permission": "Error de permiso",
+    "notfound": "No encontrado",
+    "validation": "Error de validación",
+    "server": "Error del servidor",
+    "unknown": "Error"
+  }
+}
