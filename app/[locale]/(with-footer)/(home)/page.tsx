@@ -64,7 +64,7 @@ export default async function Page() {
             <h1 className='text-3xl font-bold tracking-tight text-gray-900 lg:text-6xl'>
               {t('title')}
             </h1>
-            <p className='mt-4 max-w-2xl text-base text-gray-600 lg:text-lg'>
+            <p className='mt-4 max-w-4xl text-base text-gray-600 lg:text-lg'>
               {t('subTitle')}
             </p>
             <div className='mt-10 w-full max-w-2xl lg:mt-12'>

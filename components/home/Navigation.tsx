@@ -27,15 +27,16 @@ export default function Navigation() {
       <header className='sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-lg'>
         <div className='mx-auto flex h-16 max-w-pc items-center justify-between px-3 lg:px-0'>
           {/* Logo */}
-          <Link href='/' className='flex items-center gap-2'>
+          <Link href='/' className='flex items-center gap-10'>
             <Image
-              src='/logo.svg'
-              alt='logo'
-              width={32}
-              height={32}
-              className='size-8'
+              src='/images/aiseckit-logo-black.png'
+              alt='AisecKit Logo'
+              width={140}
+              height={140}
+              className='size-30 object-contain'
+              priority
             />
-            <span className='text-lg font-bold text-gray-900'>AisecKit</span>
+            {/* <span className='text-xl font-bold text-gray-900'>AisecKit</span> */}
           </Link>
 
           {/* Right Section: Navigation + LocaleSwitcher */}

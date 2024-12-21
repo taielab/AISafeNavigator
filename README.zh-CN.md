@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 <p align="center">
-  <img src="public/images/logo.png" alt="AI Safe Navigator Logo" width="200"/>
+  <img src="public/images/aiseckit-logo.png" alt="AI Safe Navigator Logo" width="200"/>
 </p>
 
 <p align="center">
