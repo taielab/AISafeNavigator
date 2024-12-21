@@ -147,11 +147,6 @@ NEXT_PUBLIC_GOOGLE_ADSENSE_URL= # Google AdSense script URL
 NEXT_PUBLIC_SUPABASE_URL=       # Supabase project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase anonymous key
 
-# Sanity Configuration
-NEXT_PUBLIC_SANITY_PROJECT_ID=  # Sanity project ID
-NEXT_PUBLIC_SANITY_DATASET=     # Sanity dataset name
-SANITY_API_TOKEN=               # Sanity API token
-
 # SEO Configuration
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=  # Google site verification code
 NEXT_PUBLIC_BING_SITE_VERIFICATION=    # Bing site verification code
@@ -210,12 +205,6 @@ NEXT_PUBLIC_GOOGLE_ADSENSE_URL= # Google AdSense script URL
 
 NEXT_PUBLIC_SUPABASE_URL=       # Supabase project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase anonymous key
-
-# Sanity Configuration
-
-NEXT_PUBLIC_SANITY_PROJECT_ID=  # Sanity project ID
-NEXT_PUBLIC_SANITY_DATASET=     # Sanity dataset name
-SANITY_API_TOKEN=               # Sanity API token
 
 # SEO Configuration
 

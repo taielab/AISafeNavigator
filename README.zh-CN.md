@@ -129,15 +129,15 @@ pnpm dev
 
 ```bash
 # 站点配置
-NEXT_PUBLIC_SITE_URL=           # 站点 URL (例如: http://localhost:3000)
-NEXT_PUBLIC_APP_NAME=           # 应用名称
+NEXT_PUBLIC_SITE_URL=           # 你的网站 URL (例如：http://localhost:3000)
+NEXT_PUBLIC_APP_NAME=           # 你的应用名称
 NEXT_PUBLIC_CONTACT_EMAIL=      # 联系邮箱
 NEXT_BASE_API=                  # 基础 API URL
 
 # 社交媒体配置
 NEXT_PUBLIC_SHARE_HASHTAGS=     # 社交媒体分享标签（逗号分隔）
 NEXT_PUBLIC_TWITTER_HANDLE=     # Twitter 账号
-NEXT_PUBLIC_GITHUB_REPO=        # GitHub 仓库名称
+NEXT_PUBLIC_GITHUB_REPO=        # GitHub 仓库名
 
 # 分析和广告配置
 NEXT_PUBLIC_GOOGLE_TRACKING_ID= # Google Analytics 跟踪 ID
@@ -146,11 +146,6 @@ NEXT_PUBLIC_GOOGLE_ADSENSE_URL= # Google AdSense 脚本 URL
 # Supabase 配置
 NEXT_PUBLIC_SUPABASE_URL=       # Supabase 项目 URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase 匿名密钥
-
-# Sanity 配置
-NEXT_PUBLIC_SANITY_PROJECT_ID=  # Sanity 项目 ID
-NEXT_PUBLIC_SANITY_DATASET=     # Sanity 数据集名称
-SANITY_API_TOKEN=               # Sanity API 令牌
 
 # SEO 配置
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=  # Google 站点验证码
@@ -187,7 +182,7 @@ NEXT_PUBLIC_API_MOCKING=        # API 模拟配置
 4. 在 Vercel 中配置以下环境变量：
 
 ```bash
-NEXT_PUBLIC_SITE_URL=           # 你的生产环境域名
+NEXT_PUBLIC_SITE_URL=           # ���的生产环境域名
 NEXT_PUBLIC_SUPABASE_URL=       # Supabase 项目 URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase 匿名密钥
 ```
@@ -242,7 +237,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 ## 🌍 国际化
 
-应用程��使用 `next-intl` 支持多语言。语言文件位于 `messages/` 目录中。
+应用程使用 `next-intl` 支持多语言。语言文件位于 `messages/` 目录中。
 
 ## 🎨 UI 组件
 
