@@ -383,6 +383,9 @@ For questions or feedback, please open an issue in the GitHub repository.
 ![Test Coverage](https://img.shields.io/codecov/c/github/taielab/AISafeNavigator?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/taielab/AISafeNavigator?style=for-the-badge)
 
+
+> **Project Enhancement Note**: This project is an enhanced version based on [tap4-ai-webui](https://github.com/6677-ai/tap4-ai-webui), with additional security features and improvements. The AI tools data is automatically collected and updated using [tap4-ai-crawler](https://github.com/6677-ai/tap4-ai-crawler).
+
 ## 📈 Roadmap
 
 - [x] Basic Features Implementation

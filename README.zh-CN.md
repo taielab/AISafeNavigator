@@ -182,9 +182,9 @@ NEXT_PUBLIC_API_MOCKING=        # API 模拟配置
 4. 在 Vercel 中配置以下环境变量：
 
 ```bash
-NEXT_PUBLIC_SITE_URL=           # ���的生产环境域名
-NEXT_PUBLIC_SUPABASE_URL=       # Supabase 项目 URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase 匿名密钥
+NEXT_PUBLIC_SITE_URL=           # supabase 的生产环境域名
+NEXT_PUBLIC_SUPABASE_URL=       # supabase 项目 URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=  # supabase 匿名密钥
 ```
 
 5. 使用 "Deploy" 按钮一键部署：
@@ -331,6 +331,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 ![构建状态](https://img.shields.io/github/workflow/status/taielab/AISafeNavigator/CI?style=for-the-badge)
 ![测试覆盖率](https://img.shields.io/codecov/c/github/taielab/AISafeNavigator?style=for-the-badge)
 ![最后提交](https://img.shields.io/github/last-commit/taielab/AISafeNavigator?style=for-the-badge)
+
+> **项目增强说明**: 本项目是基于 [tap4-ai-webui](https://github.com/6677-ai/tap4-ai-webui) 的增强版本，添加了额外的安全特性和改进。AI 工具数据通过 [tap4-ai-crawler](https://github.com/6677-ai/tap4-ai-crawler) 自动采集和更新。
 
 ## 📈 路线图
 
