@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useLazyComponent } from '@/lib/hooks/useLazyComponent';
+import React from "react";
+import { useLazyComponent } from "@/lib/hooks/useLazyComponent";
 
 interface LazyWrapperProps {
   children: React.ReactNode;
@@ -26,6 +26,6 @@ const LazyWrapper = React.memo(({
   );
 });
 
-LazyWrapper.displayName = 'LazyWrapper';
+LazyWrapper.displayName = "LazyWrapper";
 
 export default LazyWrapper; 

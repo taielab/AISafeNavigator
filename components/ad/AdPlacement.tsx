@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Script from 'next/script';
+import React from "react";
+import Script from "next/script";
 
 interface AdPlacementProps {
   className?: string;
@@ -18,7 +18,7 @@ const AdPlacement: React.FC<AdPlacementProps> = ({ className }) => {
       <div className={className}>
         <ins
           className="adsbygoogle"
-          style={{ display: 'block' }}
+          style={{ display: "block" }}
           data-ad-client="ca-pub-4887666022411265"
           data-ad-slot="auto"
           data-ad-format="auto"

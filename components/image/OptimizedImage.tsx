@@ -1,41 +1,41 @@
-'use client';
+"use client";
 
-import React, { useState, useCallback, useEffect } from 'react';
-import Image, { ImageProps } from 'next/image';
-import { useTranslations } from 'next-intl';
-import { cn } from '@/lib/utils';
+import React, { useState, useCallback, useEffect } from "react";
+import Image, { ImageProps } from "next/image";
+import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
-interface OptimizedImageProps extends Omit<ImageProps, 'onError'> {
+interface OptimizedImageProps extends Omit<ImageProps, "onError"> {
   fallbackSrc?: string;
   onError?: (error: Error) => void;
   lowQualitySrc?: string;
   aspectRatio?: number;
   priority?: boolean;
   sizes?: string;
-  loading?: 'lazy' | 'eager';
+  loading?: "lazy" | "eager";
 }
 
 type ImageStyle = {
   aspectRatio?: string;
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
+  objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 };
 
 const OptimizedImage = React.memo(({
   src,
   alt,
   className,
-  fallbackSrc = '/images/fallback.png',
+  fallbackSrc = "/images/fallback.png",
   onError,
   lowQualitySrc,
   aspectRatio,
   priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  loading = 'lazy',
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  loading = "lazy",
   width,
   height,
   ...props
 }: OptimizedImageProps) => {
-  const t = useTranslations('Common');
+  const t = useTranslations("Common");
   const [imgSrc, setImgSrc] = useState(src || fallbackSrc);
   const [hasError, setHasError] = useState(!src);
   const [isLoading, setIsLoading] = useState(true);
@@ -54,14 +54,14 @@ const OptimizedImage = React.memo(({
   }, [src, fallbackSrc]);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || priority) return;
+    if (typeof window === "undefined" || priority) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
       },
       {
-        rootMargin: '50px',
+        rootMargin: "50px",
       }
     );
 
@@ -76,7 +76,7 @@ const OptimizedImage = React.memo(({
   }, [src, priority]);
 
   const handleError = useCallback((error: Error) => {
-    console.error(t('image.loadError'), error);
+    console.error(t("image.loadError"), error);
     if (!hasError) {
       setImgSrc(fallbackSrc);
       setHasError(true);
@@ -91,7 +91,7 @@ const OptimizedImage = React.memo(({
 
   const imageStyle: ImageStyle = {
     aspectRatio: aspectRatio ? `${aspectRatio}` : undefined,
-    objectFit: props.fill ? 'cover' : 'contain',
+    objectFit: props.fill ? "cover" : "contain",
   };
 
   return (
@@ -107,9 +107,9 @@ const OptimizedImage = React.memo(({
         <Image
           {...props}
           src={lowQualitySrc}
-          alt={alt || t('image.loading')}
+          alt={alt || t("image.loading")}
           className={cn(
-            'absolute inset-0 blur-sm scale-110',
+            "absolute inset-0 blur-sm scale-110",
             className
           )}
           style={imageStyle}
@@ -120,15 +120,15 @@ const OptimizedImage = React.memo(({
       <Image
         {...props}
         src={imgSrc}
-        alt={alt || t('image.fallback')}
+        alt={alt || t("image.fallback")}
         className={cn(
-          'transition-opacity duration-300 ease-in-out',
-          isLoading && !hasError ? 'opacity-0' : 'opacity-100',
-          hasError && 'opacity-60',
+          "transition-opacity duration-300 ease-in-out",
+          isLoading && !hasError ? "opacity-0" : "opacity-100",
+          hasError && "opacity-60",
           className
         )}
         style={imageStyle}
-        onError={() => handleError(new Error(t('image.loadError')))}
+        onError={() => handleError(new Error(t("image.loadError")))}
         onLoad={handleLoad}
         loading={loading}
         priority={priority}
@@ -142,6 +142,6 @@ const OptimizedImage = React.memo(({
   );
 });
 
-OptimizedImage.displayName = 'OptimizedImage';
+OptimizedImage.displayName = "OptimizedImage";
 
 export default OptimizedImage; 

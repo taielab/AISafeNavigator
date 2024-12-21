@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useDebounceValue } from './useDebounceValue';
-import { createClient } from '@/db/supabase/client';
+import { useState, useEffect } from "react";
+import { useDebounceValue } from "./useDebounceValue";
+import { createClient } from "@/db/supabase/client";
 
 interface Suggestion {
   id: string;
@@ -25,9 +25,9 @@ export function useSearchSuggestions(query: string) {
       try {
         const supabase = createClient();
         const { data } = await supabase
-          .from('web_navigation')
-          .select('id, title, tag_name')
-          .ilike('title', `%${debouncedQuery}%`)
+          .from("web_navigation")
+          .select("id, title, tag_name")
+          .ilike("title", `%${debouncedQuery}%`)
           .limit(5);
 
         setSuggestions(data?.map(item => ({
@@ -35,7 +35,7 @@ export function useSearchSuggestions(query: string) {
           id: item.id.toString()
         })) || []);
       } catch (error) {
-        console.error('Error fetching suggestions:', error);
+        console.error("Error fetching suggestions:", error);
         setSuggestions([]);
       } finally {
         setIsLoading(false);

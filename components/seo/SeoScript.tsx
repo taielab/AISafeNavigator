@@ -8,10 +8,10 @@
  * 
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
  */
-'use client';
+"use client";
 
-import React from 'react';
-import Script from 'next/script';
+import React from "react";
+import Script from "next/script";
 
 interface SeoScriptProps {
   googleTrackingId?: string;
@@ -48,6 +48,6 @@ const SeoScript = React.memo(({
   );
 });
 
-SeoScript.displayName = 'SeoScript';
+SeoScript.displayName = "SeoScript";
 
 export default SeoScript;

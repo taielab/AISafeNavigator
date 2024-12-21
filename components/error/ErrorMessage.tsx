@@ -8,13 +8,13 @@
  * 
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
  */
-'use client';
+"use client";
 
-import React from 'react';
-import { AlertTriangle, XCircle, AlertCircle, Ban, ServerCrash } from 'lucide-react';
-import { ErrorType } from '@/lib/utils/error';
-import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
+import React from "react";
+import { AlertTriangle, XCircle, AlertCircle, Ban, ServerCrash } from "lucide-react";
+import { ErrorType } from "@/lib/utils/error";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface ErrorMessageProps {
   type?: ErrorType;
@@ -31,7 +31,7 @@ const ErrorMessage = React.memo(({
   className,
   onRetry,
 }: ErrorMessageProps) => {
-  const t = useTranslations('error');
+  const t = useTranslations("error");
 
   const getIcon = () => {
     switch (type) {
@@ -54,26 +54,26 @@ const ErrorMessage = React.memo(({
   const getDefaultTitle = () => {
     switch (type) {
       case ErrorType.Network:
-        return t('network');
+        return t("network");
       case ErrorType.Authentication:
-        return t('auth');
+        return t("auth");
       case ErrorType.Authorization:
-        return t('permission');
+        return t("permission");
       case ErrorType.NotFound:
-        return t('notfound');
+        return t("notfound");
       case ErrorType.Validation:
-        return t('validation');
+        return t("validation");
       case ErrorType.Server:
-        return t('server');
+        return t("server");
       default:
-        return t('unknown');
+        return t("unknown");
     }
   };
 
   return (
     <div
       className={cn(
-        'rounded-lg border border-red-100 bg-red-50 p-4',
+        "rounded-lg border border-red-100 bg-red-50 p-4",
         className
       )}
       role="alert"
@@ -92,7 +92,7 @@ const ErrorMessage = React.memo(({
               onClick={onRetry}
               className="mt-2 text-sm font-medium text-primary hover:text-primary/90"
             >
-              {t('retry')}
+              {t("retry")}
             </button>
           )}
         </div>
@@ -101,6 +101,6 @@ const ErrorMessage = React.memo(({
   );
 });
 
-ErrorMessage.displayName = 'ErrorMessage';
+ErrorMessage.displayName = "ErrorMessage";
 
 export default ErrorMessage; 

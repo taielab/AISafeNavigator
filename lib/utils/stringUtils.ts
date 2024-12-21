@@ -1,10 +1,10 @@
-import queryString from 'query-string';
+import queryString from "query-string";
 
-import { removeEmptyProperties } from './objectUtils';
+import { removeEmptyProperties } from "./objectUtils";
 
 export function objToQueryStr(path: string, obj: Record<string, any>): string {
   const qStr = queryString.stringify(removeEmptyProperties(obj));
-  return `${path}${qStr && '?'}${qStr}`;
+  return `${path}${qStr && "?"}${qStr}`;
 }
 
 export function generateBearerToken(token: string) {
@@ -12,9 +12,9 @@ export function generateBearerToken(token: string) {
 }
 
 export function spaceToDash(text: string) {
-  return text.replace(/\s/g, '-');
+  return text.replace(/\s/g, "-");
 }
 
 export function dashToSpace(text: string) {
-  return text.replace(/-/g, ' ');
+  return text.replace(/-/g, " ");
 }

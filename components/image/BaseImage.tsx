@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React, { useState, useCallback } from 'react';
-import Image, { ImageProps } from 'next/image';
-import { useTranslations } from 'next-intl';
+import React, { useState, useCallback } from "react";
+import Image, { ImageProps } from "next/image";
+import { useTranslations } from "next-intl";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
-interface BaseImageProps extends Omit<ImageProps, 'onError'> {
+interface BaseImageProps extends Omit<ImageProps, "onError"> {
   fallbackSrc?: string;
   onError?: (error: Error) => void;
   lowQualitySrc?: string;
@@ -16,12 +16,12 @@ const BaseImage = React.memo(({
   src,
   alt,
   className,
-  fallbackSrc = '/images/fallback.png',
+  fallbackSrc = "/images/fallback.png",
   onError,
   lowQualitySrc,
   ...props
 }: BaseImageProps) => {
-  const t = useTranslations('Common');
+  const t = useTranslations("Common");
   const [imgSrc, setImgSrc] = useState(src || fallbackSrc);
   const [hasError, setHasError] = useState(!src);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +39,7 @@ const BaseImage = React.memo(({
   }, [src, fallbackSrc]);
 
   const handleError = useCallback((error: Error) => {
-    console.error(t('image.loadError'), error);
+    console.error(t("image.loadError"), error);
     if (!hasError) {
       setImgSrc(fallbackSrc);
       setHasError(true);
@@ -58,9 +58,9 @@ const BaseImage = React.memo(({
         <Image
           {...props}
           src={lowQualitySrc}
-          alt={alt || t('image.loading')}
+          alt={alt || t("image.loading")}
           className={cn(
-            'absolute inset-0 blur-sm scale-110',
+            "absolute inset-0 blur-sm scale-110",
             className
           )}
         />
@@ -68,14 +68,14 @@ const BaseImage = React.memo(({
       <Image
         {...props}
         src={imgSrc}
-        alt={alt || t('image.fallback')}
+        alt={alt || t("image.fallback")}
         className={cn(
-          'transition-all duration-300',
-          isLoading && !hasError && 'scale-110 blur-sm',
-          hasError && 'opacity-60',
+          "transition-all duration-300",
+          isLoading && !hasError && "scale-110 blur-sm",
+          hasError && "opacity-60",
           className
         )}
-        onError={() => handleError(new Error(t('image.loadError')))}
+        onError={() => handleError(new Error(t("image.loadError")))}
         onLoad={handleLoad}
         unoptimized={hasError}
       />
@@ -83,6 +83,6 @@ const BaseImage = React.memo(({
   );
 });
 
-BaseImage.displayName = 'BaseImage';
+BaseImage.displayName = "BaseImage";
 
 export default BaseImage;

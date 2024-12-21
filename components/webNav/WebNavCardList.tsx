@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useMemo } from 'react';
-import { WebNavigation } from '@/db/supabase/types';
-import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+import React, { useMemo } from "react";
+import { WebNavigation } from "@/db/supabase/types";
+import { useTranslations } from "next-intl";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
-import { cn } from '@/lib/utils';
-import Empty from '../Empty';
-import WebNavCard from './WebNavCard';
-import AdPlacement from '../ad/AdPlacement';
-import LazyWrapper from '../lazy/LazyWrapper';
+import { cn } from "@/lib/utils";
+import Empty from "../Empty";
+import WebNavCard from "./WebNavCard";
+import AdPlacement from "../ad/AdPlacement";
+import LazyWrapper from "../lazy/LazyWrapper";
 
 interface WebNavCardListProps {
   dataList: WebNavigation[];
@@ -34,10 +34,10 @@ const itemAnimation: Variants = {
 };
 
 const columnClasses = {
-  1: 'grid-cols-1',
-  2: 'grid-cols-1 sm:grid-cols-2',
-  3: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
-  4: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+  1: "grid-cols-1",
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  4: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
 };
 
 // 每隔多少个项目插入一个广告
@@ -49,13 +49,13 @@ const WebNavCardList = React.memo(({
   columns = 3,
   animate = true
 }: WebNavCardListProps) => {
-  const t = useTranslations('Home');
+  const t = useTranslations("Home");
 
-  const Wrapper = animate ? motion.div : 'div';
+  const Wrapper = animate ? motion.div : "div";
 
   const renderItems = useMemo(() => {
     if (!dataList?.length) {
-      return <Empty title={t('empty')} />;
+      return <Empty title={t("empty")} />;
     }
 
     return dataList.map((item, index) => {
@@ -93,7 +93,7 @@ const WebNavCardList = React.memo(({
       <Wrapper
         className={cn(
           `grid gap-4 sm:gap-5 lg:gap-6 ${columnClasses[columns]}`,
-          'px-0.5 sm:px-0',  // 添加小边距防止阴影被裁剪
+          "px-0.5 sm:px-0",  // 添加小边距防止阴影被裁剪
           className
         )}
         variants={container}
@@ -106,6 +106,6 @@ const WebNavCardList = React.memo(({
   );
 });
 
-WebNavCardList.displayName = 'WebNavCardList';
+WebNavCardList.displayName = "WebNavCardList";
 
 export default WebNavCardList;

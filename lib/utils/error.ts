@@ -1,12 +1,12 @@
 // 错误类型定义
 export enum ErrorType {
-  Network = 'NETWORK_ERROR',
-  Authentication = 'AUTH_ERROR',
-  Authorization = 'AUTHORIZATION_ERROR',
-  NotFound = 'NOT_FOUND',
-  Validation = 'VALIDATION_ERROR',
-  Server = 'SERVER_ERROR',
-  Unknown = 'UNKNOWN_ERROR',
+  Network = "NETWORK_ERROR",
+  Authentication = "AUTH_ERROR",
+  Authorization = "AUTHORIZATION_ERROR",
+  NotFound = "NOT_FOUND",
+  Validation = "VALIDATION_ERROR",
+  Server = "SERVER_ERROR",
+  Unknown = "UNKNOWN_ERROR",
 }
 
 // 自定义错误类
@@ -18,7 +18,7 @@ export class AppError extends Error {
     public originalError?: Error
   ) {
     super(message);
-    this.name = 'AppError';
+    this.name = "AppError";
   }
 }
 
@@ -30,60 +30,60 @@ export function handleError(error: unknown): AppError {
 
   if (error instanceof Error) {
     // 网络错误
-    if (error.name === 'NetworkError' || error.message.includes('network')) {
+    if (error.name === "NetworkError" || error.message.includes("network")) {
       return new AppError(
         ErrorType.Network,
-        '网络连接错误，请检查您的网络连接',
+        "网络连接错误，请检查您的网络连接",
         503,
         error
       );
     }
 
     // 认证错误
-    if (error.message.includes('unauthorized') || error.message.includes('unauthenticated')) {
+    if (error.message.includes("unauthorized") || error.message.includes("unauthenticated")) {
       return new AppError(
         ErrorType.Authentication,
-        '请���登录',
+        "请���登录",
         401,
         error
       );
     }
 
     // 授权错误
-    if (error.message.includes('forbidden') || error.message.includes('permission')) {
+    if (error.message.includes("forbidden") || error.message.includes("permission")) {
       return new AppError(
         ErrorType.Authorization,
-        '没有权限执行此操作',
+        "没有权限执行此操作",
         403,
         error
       );
     }
 
     // 未找到
-    if (error.message.includes('not found')) {
+    if (error.message.includes("not found")) {
       return new AppError(
         ErrorType.NotFound,
-        '请求的资源不存在',
+        "请求的资源不存在",
         404,
         error
       );
     }
 
     // 验证错误
-    if (error.message.includes('validation')) {
+    if (error.message.includes("validation")) {
       return new AppError(
         ErrorType.Validation,
-        '输入数据验证失败',
+        "输入数据验证失败",
         400,
         error
       );
     }
 
     // 服务器错误
-    if (error.message.includes('server')) {
+    if (error.message.includes("server")) {
       return new AppError(
         ErrorType.Server,
-        '服务器错误，请稍后重试',
+        "服务器错误，请稍后重试",
         500,
         error
       );
@@ -93,7 +93,7 @@ export function handleError(error: unknown): AppError {
   // 未知错误
   return new AppError(
     ErrorType.Unknown,
-    '发生了未知错误',
+    "发生了未知错误",
     500,
     error instanceof Error ? error : new Error(String(error))
   );
@@ -126,8 +126,8 @@ export async function retry<T>(
 export function formatErrorMessage(error: unknown): string {
   const appError = handleError(error);
   return `${appError.message}${
-    process.env.NODE_ENV === 'development' && appError.originalError
+    process.env.NODE_ENV === "development" && appError.originalError
       ? `\n\nOriginal error: ${appError.originalError.message}`
-      : ''
+      : ""
   }`;
 } 

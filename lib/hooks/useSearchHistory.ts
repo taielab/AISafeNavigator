@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const SEARCH_HISTORY_KEY = 'search_history';
+const SEARCH_HISTORY_KEY = "search_history";
 const MAX_HISTORY_ITEMS = 10;
 
 export function useSearchHistory() {

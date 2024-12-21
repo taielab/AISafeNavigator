@@ -8,25 +8,25 @@
  * 
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved. 
  */
-import { Suspense } from 'react';
-import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
-import { createClient } from '@/db/supabase/client';
-import { getTranslations } from 'next-intl/server';
+import { Suspense } from "react";
+import { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { createClient } from "@/db/supabase/client";
+import { getTranslations } from "next-intl/server";
 
-import { RevalidateOneHour } from '@/lib/constants';
-import { generateMetadata as generateSeoMetadata, generateSearchStructuredData } from '@/lib/utils/seo';
-import { Separator } from '@/components/ui/separator';
-import Empty from '@/components/Empty';
-import Faq from '@/components/Faq';
-import WebNavCardList from '@/components/webNav/WebNavCardList';
-import AdPlacement from '@/components/ad/AdPlacement';
-import StructuredData from '@/components/seo/StructuredData';
+import { RevalidateOneHour } from "@/lib/constants";
+import { generateMetadata as generateSeoMetadata, generateSearchStructuredData } from "@/lib/utils/seo";
+import { Separator } from "@/components/ui/separator";
+import Empty from "@/components/Empty";
+import Faq from "@/components/Faq";
+import WebNavCardList from "@/components/webNav/WebNavCardList";
+import AdPlacement from "@/components/ad/AdPlacement";
+import StructuredData from "@/components/seo/StructuredData";
 
-import { TagList } from '../../Tag';
-import Loading from './loading';
+import { TagList } from "../../Tag";
+import Loading from "./loading";
 
-const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
+const ScrollToTop = dynamic(() => import("@/components/page/ScrollToTop"), { ssr: false });
 
 export async function generateMetadata({ 
   params: { locale, search } 
@@ -35,17 +35,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({
     locale,
-    namespace: 'Metadata.search',
+    namespace: "Metadata.search",
   });
 
   const decodedSearch = decodeURI(search);
 
   return generateSeoMetadata({
-    title: t('title', { query: decodedSearch }),
-    description: t('description', { query: decodedSearch }),
-    keywords: [decodedSearch, t('keywords')],
+    title: t("title", { query: decodedSearch }),
+    description: t("description", { query: decodedSearch }),
+    keywords: [decodedSearch, t("keywords")],
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/query/${search}`,
-    type: 'website',
+    type: "website",
     locale,
   });
 }
@@ -54,15 +54,15 @@ export const revalidate = RevalidateOneHour / 2;
 
 export default async function Page({ params }: { params: { search?: string } }) {
   const supabase = createClient();
-  const t = await getTranslations('Home');
-  const { data: categoryList } = await supabase.from('navigation_category').select();
+  const t = await getTranslations("Home");
+  const { data: categoryList } = await supabase.from("navigation_category").select();
   
-  const searchQuery = decodeURI(params?.search || '').trim();
+  const searchQuery = decodeURI(params?.search || "").trim();
   const { data: dataList } = await supabase
-    .from('web_navigation')
+    .from("web_navigation")
     .select()
     .or(`title.ilike.%${searchQuery}%,detail.ilike.%${searchQuery}%,content.ilike.%${searchQuery}%,tag_name.ilike.%${searchQuery}%`)
-    .order('collection_time', { ascending: false });
+    .order("collection_time", { ascending: false });
 
   const structuredData = generateSearchStructuredData({
     query: searchQuery,
@@ -75,22 +75,22 @@ export default async function Page({ params }: { params: { search?: string } }) 
 
       <AdPlacement className="mb-8" />
 
-      <section className='flex flex-col gap-5'>
+      <section className="flex flex-col gap-5">
         {dataList && !!dataList.length && params?.search ? (
           <>
-            <h2 className='mb-1 text-2xl font-semibold text-gray-900 lg:text-3xl'>
-              {t('result')}
+            <h2 className="mb-1 text-2xl font-semibold text-gray-900 lg:text-3xl">
+              {t("result")}
             </h2>
             <WebNavCardList dataList={dataList!} />
           </>
         ) : (
-          <Empty title={t('empty')} />
+          <Empty title={t("empty")} />
         )}
       </section>
 
       <AdPlacement className="my-10 lg:my-16" />
       
-      <Separator className='mx-auto my-10 h-px w-4/5 bg-gray-100 lg:my-16' />
+      <Separator className="mx-auto my-10 h-px w-4/5 bg-gray-100 lg:my-16" />
       <Faq />
 
       <AdPlacement className="mt-10 lg:mt-16" />

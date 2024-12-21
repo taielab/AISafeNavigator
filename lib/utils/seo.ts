@@ -1,17 +1,17 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
-export type OpenGraphType = 'website' | 'article' | 'book' | 'profile';
+export type OpenGraphType = "website" | "article" | "book" | "profile";
 export type SchemaType = 
-  | 'WebSite' 
-  | 'SoftwareApplication' 
-  | 'BreadcrumbList' 
-  | 'SearchAction' 
-  | 'Organization'
-  | 'FAQPage'
-  | 'Question'
-  | 'Answer';
-export type ImageType = 'image/jpeg' | 'image/png' | 'image/webp' | 'image/gif';
-export type PriceType = 'Free' | 'Freemium' | 'Paid';
+  | "WebSite" 
+  | "SoftwareApplication" 
+  | "BreadcrumbList" 
+  | "SearchAction" 
+  | "Organization"
+  | "FAQPage"
+  | "Question"
+  | "Answer";
+export type ImageType = "image/jpeg" | "image/png" | "image/webp" | "image/gif";
+export type PriceType = "Free" | "Freemium" | "Paid";
 
 export interface ImageMetaData {
   url: string;
@@ -37,8 +37,8 @@ export interface MetaData {
 }
 
 export interface StructuredData {
-  '@context': 'https://schema.org';
-  '@type': SchemaType;
+  "@context": "https://schema.org";
+  "@type": SchemaType;
   name?: string;
   title?: string;
   description?: string;
@@ -48,15 +48,15 @@ export interface StructuredData {
 }
 
 export type SupportedLocale = 
-  | 'en'
-  | 'cn'
-  | 'tw'
-  | 'ru'
-  | 'pt'
-  | 'jp'
-  | 'fr'
-  | 'de'
-  | 'es';
+  | "en"
+  | "cn"
+  | "tw"
+  | "ru"
+  | "pt"
+  | "jp"
+  | "fr"
+  | "de"
+  | "es";
 
 interface BaseConfig {
   baseUrl: string;
@@ -77,22 +77,22 @@ const getBaseConfig = (): BaseConfig => {
 
   baseConfigCache = {
     baseUrl: process.env.NEXT_PUBLIC_SITE_URL as string,
-    defaultImage: process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE || '/images/og-image.jpg',
-    defaultDescription: process.env.NEXT_PUBLIC_DEFAULT_DESCRIPTION || '发现最佳的 AI 安全和渗透测试工具。探索面向网络安全专业人士的教程、评论和顶级工具。',
-    siteName: process.env.NEXT_PUBLIC_APP_NAME || 'AISafeNavigator',
-    twitterHandle: process.env.NEXT_PUBLIC_TWITTER_HANDLE || 'AISafeNavigator',
-    shareHashtags: process.env.NEXT_PUBLIC_SHARE_HASHTAGS?.split(',') || ['AI', 'Tools', 'Security', 'Pentesting'],
-    locale: 'en',
+    defaultImage: process.env.NEXT_PUBLIC_DEFAULT_OG_IMAGE || "/images/og-image.jpg",
+    defaultDescription: process.env.NEXT_PUBLIC_DEFAULT_DESCRIPTION || "发现最佳的 AI 安全和渗透测试工具。探索面向网络安全专业人士的教程、评论和顶级工具。",
+    siteName: process.env.NEXT_PUBLIC_APP_NAME || "AISafeNavigator",
+    twitterHandle: process.env.NEXT_PUBLIC_TWITTER_HANDLE || "AISafeNavigator",
+    shareHashtags: process.env.NEXT_PUBLIC_SHARE_HASHTAGS?.split(",") || ["AI", "Tools", "Security", "Pentesting"],
+    locale: "en",
     supportedLocales: {
-      'en': '/en',
-      'cn': '/cn',
-      'tw': '/tw',
-      'ru': '/ru',
-      'pt': '/pt',
-      'jp': '/jp',
-      'fr': '/fr',
-      'de': '/de',
-      'es': '/es',
+      "en": "/en",
+      "cn": "/cn",
+      "tw": "/tw",
+      "ru": "/ru",
+      "pt": "/pt",
+      "jp": "/jp",
+      "fr": "/fr",
+      "de": "/de",
+      "es": "/es",
     },
   };
 
@@ -106,7 +106,7 @@ export const clearBaseConfigCache = () => {
 
 const getFullUrl = (url: string | undefined, baseUrl: string): string => {
   if (!url) return baseUrl;
-  return url.startsWith('http') ? url : `${baseUrl}${url}`;
+  return url.startsWith("http") ? url : `${baseUrl}${url}`;
 };
 
 const getImageMetaData = (image: string | ImageMetaData | undefined, config: BaseConfig): ImageMetaData => {
@@ -116,17 +116,17 @@ const getImageMetaData = (image: string | ImageMetaData | undefined, config: Bas
       width: 1200,
       height: 630,
       alt: config.siteName,
-      type: 'image/jpeg',
+      type: "image/jpeg",
     };
   }
 
-  if (typeof image === 'string') {
+  if (typeof image === "string") {
     return {
       url: getFullUrl(image, config.baseUrl),
       width: 1200,
       height: 630,
       alt: config.siteName,
-      type: image.endsWith('.png') ? 'image/png' : 'image/jpeg',
+      type: image.endsWith(".png") ? "image/png" : "image/jpeg",
     };
   }
 
@@ -136,7 +136,7 @@ const getImageMetaData = (image: string | ImageMetaData | undefined, config: Bas
     alt: image.alt || config.siteName,
     width: image.width || 1200,
     height: image.height || 630,
-    type: image.type || (image.url.endsWith('.png') ? 'image/png' : 'image/jpeg'),
+    type: image.type || (image.url.endsWith(".png") ? "image/png" : "image/jpeg"),
   };
 };
 
@@ -161,9 +161,9 @@ export function generateMetadata(data: MetaData): Metadata {
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
     openGraph: {
@@ -172,14 +172,14 @@ export function generateMetadata(data: MetaData): Metadata {
       images: [imageData],
       siteName: data.siteName || config.siteName,
       locale: data.locale || config.locale,
-      type: data.type || 'website',
+      type: data.type || "website",
       url: fullUrl,
       ...(data.publishedTime && { publishedTime: data.publishedTime }),
       ...(data.modifiedTime && { modifiedTime: data.modifiedTime }),
       ...(data.section && { section: data.section }),
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: data.title,
       description: data.description || config.defaultDescription,
       images: [imageData.url],
@@ -187,10 +187,10 @@ export function generateMetadata(data: MetaData): Metadata {
       site: `@${config.twitterHandle}`,
     },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
       other: {
-        bing: [process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || ''],
-        baidu: [process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION || ''],
+        bing: [process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || ""],
+        baidu: [process.env.NEXT_PUBLIC_BAIDU_SITE_VERIFICATION || ""],
       },
     },
     category: data.section,
@@ -201,9 +201,9 @@ export function generateMetadata(data: MetaData): Metadata {
 }
 
 export function generateSearchStructuredData({ 
-  query = '', 
+  query = "", 
   url = process.env.NEXT_PUBLIC_SITE_URL as string,
-  searchPath = '/query'
+  searchPath = "/query"
 }: { 
   query?: string; 
   url?: string;
@@ -213,18 +213,18 @@ export function generateSearchStructuredData({
   const fullUrl = getFullUrl(url, config.baseUrl);
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
     name: config.siteName,
     description: config.defaultDescription,
     url: fullUrl,
     potentialAction: {
-      '@type': 'SearchAction',
+      "@type": "SearchAction",
       target: {
-        '@type': 'EntryPoint',
+        "@type": "EntryPoint",
         urlTemplate: `${fullUrl}${searchPath}/{search_term_string}`,
       },
-      'query-input': 'required name=search_term_string',
+      "query-input": "required name=search_term_string",
     },
   };
 }
@@ -239,12 +239,12 @@ export function generateBreadcrumbStructuredData(items: BreadcrumbItem[]): Struc
   const config = getBaseConfig();
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     name: config.siteName,
     description: config.defaultDescription,
     itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: index + 1,
       name: item.name,
       item: getFullUrl(item.url, config.baseUrl),
@@ -276,19 +276,19 @@ export function generateToolStructuredData(data: ToolMetaData): StructuredData {
   // 处理价格信息
   const getOffers = () => {
     const offer = {
-      '@type': 'Offer' as const,
-      price: data.price || '0',
-      priceCurrency: data.priceCurrency || 'USD',
+      "@type": "Offer" as const,
+      price: data.price || "0",
+      priceCurrency: data.priceCurrency || "USD",
     };
 
     if (data.priceType) {
       switch (data.priceType) {
-        case 'Free':
-          return { ...offer, price: '0', availability: 'https://schema.org/InStock' };
-        case 'Freemium':
-          return { ...offer, price: '0', availability: 'https://schema.org/InStock', description: 'Free plan available' };
-        case 'Paid':
-          return { ...offer, availability: 'https://schema.org/InStock' };
+        case "Free":
+          return { ...offer, price: "0", availability: "https://schema.org/InStock" };
+        case "Freemium":
+          return { ...offer, price: "0", availability: "https://schema.org/InStock", description: "Free plan available" };
+        case "Paid":
+          return { ...offer, availability: "https://schema.org/InStock" };
       }
     }
 
@@ -296,15 +296,15 @@ export function generateToolStructuredData(data: ToolMetaData): StructuredData {
   };
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
     title: data.title,
     name: data.title,
     description: data.description || config.defaultDescription,
     image: imageData.url,
     url: fullUrl,
-    applicationCategory: data.category || 'Security',
-    operatingSystem: data.operatingSystem || 'Web',
+    applicationCategory: data.category || "Security",
+    operatingSystem: data.operatingSystem || "Web",
     offers: getOffers(),
     ...(data.applicationSubCategory && { applicationSubCategory: data.applicationSubCategory }),
     ...(data.downloadUrl && { downloadUrl: getFullUrl(data.downloadUrl, config.baseUrl) }),
@@ -312,7 +312,7 @@ export function generateToolStructuredData(data: ToolMetaData): StructuredData {
     ...(data.releaseNotes && { releaseNotes: data.releaseNotes }),
     ...(data.softwareVersion && { softwareVersion: data.softwareVersion }),
     ...(data.rating && { aggregateRating: {
-      '@type': 'AggregateRating',
+      "@type": "AggregateRating",
       ratingValue: data.rating,
       bestRating: 5,
       worstRating: 1,
@@ -328,13 +328,13 @@ export interface FaqItem {
 
 export function generateFaqStructuredData(items: FaqItem[]): StructuredData {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: items.map(item => ({
-      '@type': 'Question',
+      "@type": "Question",
       name: item.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: item.answer,
       },
     })),

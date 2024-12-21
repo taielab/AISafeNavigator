@@ -1,5 +1,5 @@
-import { useState, useCallback, useRef } from 'react';
-import { useDebounce } from './useDebounce';
+import { useState, useCallback, useRef } from "react";
+import { useDebounce } from "./useDebounce";
 
 interface SearchResult {
   id: string;
@@ -19,7 +19,7 @@ interface CacheItem {
 }
 
 export function useSearch({ debounceTime = 300, cacheTime = 5 * 60 * 1000 }: UseSearchOptions = {}) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -53,7 +53,7 @@ export function useSearch({ debounceTime = 300, cacheTime = 5 * 60 * 1000 }: Use
       // 这里替换为实际的搜索API调用
       const response = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
       if (!response.ok) {
-        throw new Error('Search failed');
+        throw new Error("Search failed");
       }
 
       const data = await response.json();
@@ -65,7 +65,7 @@ export function useSearch({ debounceTime = 300, cacheTime = 5 * 60 * 1000 }: Use
         timestamp: Date.now(),
       };
     } catch (err) {
-      setError(err instanceof Error ? err : new Error('Search failed'));
+      setError(err instanceof Error ? err : new Error("Search failed"));
       setResults([]);
     } finally {
       setIsLoading(false);
@@ -83,7 +83,7 @@ export function useSearch({ debounceTime = 300, cacheTime = 5 * 60 * 1000 }: Use
 
   // 清除搜索
   const clearSearch = useCallback(() => {
-    setQuery('');
+    setQuery("");
     setResults([]);
     setError(null);
   }, []);

@@ -1,10 +1,10 @@
-import { createClient } from '@/db/supabase/client';
+import { createClient } from "@/db/supabase/client";
 
-import SearchForm from '@/components/home/SearchForm';
-import BasePagination from '@/components/page/BasePagination';
-import WebNavCardList from '@/components/webNav/WebNavCardList';
+import SearchForm from "@/components/home/SearchForm";
+import BasePagination from "@/components/page/BasePagination";
+import WebNavCardList from "@/components/webNav/WebNavCardList";
 
-import { TagList } from '../(home)/Tag';
+import { TagList } from "../(home)/Tag";
 
 const WEB_PAGE_SIZE = 12;
 
@@ -17,20 +17,20 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
   const end = start + WEB_PAGE_SIZE - 1;
 
   const [{ data: categoryList }, { data: navigationList, count }] = await Promise.all([
-    supabase.from('navigation_category').select(),
+    supabase.from("navigation_category").select(),
     supabase
-      .from('web_navigation')
-      .select('*', { count: 'exact' })
-      .order('collection_time', { ascending: false })
+      .from("web_navigation")
+      .select("*", { count: "exact" })
+      .order("collection_time", { ascending: false })
       .range(start, end),
   ]);
 
   return (
     <>
-      <div className='flex w-full items-center justify-center'>
+      <div className="flex w-full items-center justify-center">
         <SearchForm />
       </div>
-      <div className='mb-10 mt-5'>
+      <div className="mb-10 mt-5">
         <TagList
           data={categoryList!.map((item) => ({
             id: String(item.id),
@@ -44,9 +44,9 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
         currentPage={currentPage}
         pageSize={WEB_PAGE_SIZE}
         total={count!}
-        route='/explore'
-        subRoute='/page'
-        className='my-5 lg:my-10'
+        route="/explore"
+        subRoute="/page"
+        className="my-5 lg:my-10"
       />
     </>
   );

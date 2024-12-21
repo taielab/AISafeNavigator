@@ -1,5 +1,5 @@
-import { useState, useCallback } from 'react';
-import { retry } from '@/lib/utils/error';
+import { useState, useCallback } from "react";
+import { retry } from "@/lib/utils/error";
 
 interface UseErrorRetryOptions {
   maxRetries?: number;

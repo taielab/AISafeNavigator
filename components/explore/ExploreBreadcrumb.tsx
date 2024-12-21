@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useMemo } from 'react';
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import { ChevronRight } from 'lucide-react';
+import React, { useMemo } from "react";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { ChevronRight } from "lucide-react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 interface BreadcrumbItem {
   href: string;
@@ -29,22 +29,22 @@ const BreadcrumbLink = React.memo(({
   <Link
     href={href}
     className={cn(
-      'text-sm font-medium transition-colors duration-200',
+      "text-sm font-medium transition-colors duration-200",
       isLast 
-        ? 'text-gray-900 pointer-events-none' 
-        : 'text-gray-500 hover:text-gray-700',
-      'focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-sm'
+        ? "text-gray-900 pointer-events-none" 
+        : "text-gray-500 hover:text-gray-700",
+      "focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-sm"
     )}
-    aria-current={isLast ? 'page' : undefined}
+    aria-current={isLast ? "page" : undefined}
   >
     {label}
   </Link>
 ));
 
-BreadcrumbLink.displayName = 'BreadcrumbLink';
+BreadcrumbLink.displayName = "BreadcrumbLink";
 
 const ExploreBreadcrumb = React.memo(({ items = [], className }: BreadcrumbProps) => {
-  const t = useTranslations('Category');
+  const t = useTranslations("Category");
 
   const breadcrumbItems = useMemo(() => {
     if (!Array.isArray(items)) return [];
@@ -57,13 +57,13 @@ const ExploreBreadcrumb = React.memo(({ items = [], className }: BreadcrumbProps
   return (
     <nav 
       aria-label="Breadcrumb"
-      className={cn('flex items-center space-x-2', className)}
+      className={cn("flex items-center space-x-2", className)}
     >
       <ol className="flex items-center space-x-2">
         <li>
           <BreadcrumbLink 
             href="/"
-            label={t('home')}
+            label={t("home")}
             isLast={false}
           />
         </li>
@@ -87,6 +87,6 @@ const ExploreBreadcrumb = React.memo(({ items = [], className }: BreadcrumbProps
   );
 });
 
-ExploreBreadcrumb.displayName = 'ExploreBreadcrumb';
+ExploreBreadcrumb.displayName = "ExploreBreadcrumb";
 
 export default ExploreBreadcrumb;

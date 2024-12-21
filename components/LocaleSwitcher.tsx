@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState, useCallback, useTransition } from 'react';
-import { languages } from '@/i18n';
-import { useLocale } from 'next-intl';
+import React, { useState, useCallback, useTransition } from "react";
+import { languages } from "@/i18n";
+import { useLocale } from "next-intl";
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { cn } from '@/lib/utils';
-import { usePathname, useRouter } from '../app/navigation';
-import Icon from './image/Icon';
-import Loading from './Loading';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
+import { usePathname, useRouter } from "../app/navigation";
+import Icon from "./image/Icon";
+import Loading from "./Loading";
 
 interface LocaleSwitcherProps {
   className?: string;
@@ -30,7 +30,7 @@ const LocaleSwitcher = React.memo(({ className }: LocaleSwitcherProps) => {
   }, [pathname, router]);
 
   return (
-    <div className={cn('relative', className)}>
+    <div className={cn("relative", className)}>
       <Select 
         value={currentLocale} 
         defaultValue={currentLocale} 
@@ -39,17 +39,17 @@ const LocaleSwitcher = React.memo(({ className }: LocaleSwitcherProps) => {
       >
         <SelectTrigger 
           className={cn(
-            'flex h-8 w-[80px] items-center gap-1 rounded-lg',
-            'border border-gray-200 bg-transparent px-2',
-            'text-gray-600 hover:bg-gray-50',
-            'focus:ring-2 focus:ring-primary/20'
+            "flex h-8 w-[80px] items-center gap-1 rounded-lg",
+            "border border-gray-200 bg-transparent px-2",
+            "text-gray-600 hover:bg-gray-50",
+            "focus:ring-2 focus:ring-primary/20"
           )}
         >
           <Icon 
-            src='/icons/global.svg' 
+            src="/icons/global.svg" 
             className="text-gray-400 transition-colors duration-200 group-hover:text-primary"
           />
-          <SelectValue placeholder='locale' className="text-gray-700">
+          <SelectValue placeholder="locale" className="text-gray-700">
             {currentLocale.toUpperCase()}
           </SelectValue>
         </SelectTrigger>
@@ -63,10 +63,10 @@ const LocaleSwitcher = React.memo(({ className }: LocaleSwitcherProps) => {
               value={language.lang} 
               key={language.code} 
               className={cn(
-                'cursor-pointer',
-                'text-gray-600 hover:text-gray-900',
-                'hover:bg-gray-50 active:bg-gray-100',
-                'focus:bg-gray-50 focus:text-gray-900'
+                "cursor-pointer",
+                "text-gray-600 hover:text-gray-900",
+                "hover:bg-gray-50 active:bg-gray-100",
+                "focus:bg-gray-50 focus:text-gray-900"
               )}
               disabled={isChanging}
             >
@@ -84,6 +84,6 @@ const LocaleSwitcher = React.memo(({ className }: LocaleSwitcherProps) => {
   );
 });
 
-LocaleSwitcher.displayName = 'LocaleSwitcher';
+LocaleSwitcher.displayName = "LocaleSwitcher";
 
 export default LocaleSwitcher;

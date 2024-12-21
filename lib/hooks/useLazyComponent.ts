@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback } from "react";
 
 interface UseLazyComponentOptions {
   threshold?: number;
@@ -6,7 +6,7 @@ interface UseLazyComponentOptions {
 }
 
 export function useLazyComponent(options: UseLazyComponentOptions = {}) {
-  const { threshold = 0.1, rootMargin = '50px' } = options;
+  const { threshold = 0.1, rootMargin = "50px" } = options;
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const componentRef = useRef<HTMLDivElement>(null);

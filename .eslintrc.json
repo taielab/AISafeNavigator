@@ -1,9 +1,16 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
   "rules": {
-    "jsx-quotes": ["error", "double"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": ["error", "double"],
     "no-trailing-spaces": "off",
     "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "eol-last": "off",
     "arrow-parens": "off",
     "react/function-component-definition": "off",

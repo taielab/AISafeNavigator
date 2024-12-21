@@ -1,51 +1,51 @@
-import { notFound } from 'next/navigation';
-import { getRequestConfig } from 'next-intl/server';
+import { notFound } from "next/navigation";
+import { getRequestConfig } from "next-intl/server";
 
 export const languages = [
   {
-    code: 'en-US',
-    lang: 'en',
-    label: 'English',
+    code: "en-US",
+    lang: "en",
+    label: "English",
   },
   {
-    code: 'ja-JP',
-    lang: 'jp',
-    label: '日本語',
+    code: "ja-JP",
+    lang: "jp",
+    label: "日本語",
   },
   {
-    code: 'de-DE',
-    lang: 'de',
-    label: 'Deutsch',
+    code: "de-DE",
+    lang: "de",
+    label: "Deutsch",
   },
   {
-    code: 'es-ES',
-    lang: 'es',
-    label: 'Español',
+    code: "es-ES",
+    lang: "es",
+    label: "Español",
   },
   {
-    code: 'fr-FR',
-    lang: 'fr',
-    label: 'Français',
+    code: "fr-FR",
+    lang: "fr",
+    label: "Français",
   },
   {
-    code: 'pt-BR',
-    lang: 'pt',
-    label: 'Português',
+    code: "pt-BR",
+    lang: "pt",
+    label: "Português",
   },
   {
-    code: 'ru-RU',
-    lang: 'ru',
-    label: 'Русский',
+    code: "ru-RU",
+    lang: "ru",
+    label: "Русский",
   },
   {
-    code: 'zh-CN',
-    lang: 'cn',
-    label: '简体中文',
+    code: "zh-CN",
+    lang: "cn",
+    label: "简体中文",
   },
   {
-    code: 'zh-TW',
-    lang: 'tw',
-    label: '繁體中文',
+    code: "zh-TW",
+    lang: "tw",
+    label: "繁體中文",
   },
 ];
 

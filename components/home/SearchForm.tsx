@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import React, { useCallback } from 'react';
-import { useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils';
-import SearchInput from '../search/SearchInput';
+import React, { useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+import SearchInput from "../search/SearchInput";
 
 interface SearchFormProps {
   defaultSearch?: string;
   className?: string;
 }
 
-const SearchForm = React.memo(({ defaultSearch = '', className }: SearchFormProps) => {
+const SearchForm = React.memo(({ defaultSearch = "", className }: SearchFormProps) => {
   const router = useRouter();
 
   const handleSearch = useCallback((query: string) => {
@@ -21,11 +21,11 @@ const SearchForm = React.memo(({ defaultSearch = '', className }: SearchFormProp
 
   return (
     <form 
-      className={cn('w-full', className)}
+      className={cn("w-full", className)}
       onSubmit={(e) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;
-        const input = form.querySelector('input') as HTMLInputElement;
+        const input = form.querySelector("input") as HTMLInputElement;
         handleSearch(input.value);
       }}
     >
@@ -37,6 +37,6 @@ const SearchForm = React.memo(({ defaultSearch = '', className }: SearchFormProp
   );
 });
 
-SearchForm.displayName = 'SearchForm';
+SearchForm.displayName = "SearchForm";
 
 export default SearchForm;
