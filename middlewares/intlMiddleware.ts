@@ -1,13 +1,17 @@
 import createMiddleware from "next-intl/middleware";
 
-import { localePrefix } from "@/app/navigation";
-
 import { locales } from "../i18n";
 
-const intlMiddleware = createMiddleware({
-  locales,
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: locales,
+  
+  // Used when no locale matches
   defaultLocale: "en",
-  localePrefix,
-});
+  
+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
+  localePrefix: "as-needed",
 
-export default intlMiddleware;
+  // Configure default locale detection
+  localeDetection: true
+});

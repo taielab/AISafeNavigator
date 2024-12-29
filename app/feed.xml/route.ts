@@ -1,4 +1,5 @@
 import { createClient } from "@/db/supabase/client";
+import { BASE_URL } from "@/lib/env";
 
 function escapeXml(unsafe: string | undefined | null): string {
   if (!unsafe) return "";
@@ -22,7 +23,6 @@ export async function GET(request: Request) {
     .order("collection_time", { ascending: false })
     .limit(100);
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "";
   const url = new URL(request.url);
   const locale = url.pathname.startsWith("/cn") ? "cn" : "en";
 
@@ -35,23 +35,46 @@ export async function GET(request: Request) {
     : "Discover the best AI security and penetration testing tools. Explore tutorials, reviews, and top-rated tools for cybersecurity professionals.";
 
   const rss = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:media="http://search.yahoo.com/mrss/">
 <channel>
   <title>${escapeXml(title)}</title>
-  <link>${escapeXml(baseUrl)}/${locale}</link>
+  <link>${escapeXml(BASE_URL)}/${locale}</link>
   <description>${escapeXml(description)}</description>
   <language>${locale === "cn" ? "zh-CN" : "en"}</language>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-  <atom:link href="${escapeXml(baseUrl)}/${locale}/feed.xml" rel="self" type="application/rss+xml"/>
+  <generator>AISecKit RSS Generator</generator>
+  <docs>https://www.rssboard.org/rss-specification</docs>
+  <atom:link href="${escapeXml(BASE_URL)}/${locale}/feed.xml" rel="self" type="application/rss+xml"/>
+  <image>
+    <url>${escapeXml(BASE_URL)}/images/aiseckit-logo.png</url>
+    <title>${escapeXml(title)}</title>
+    <link>${escapeXml(BASE_URL)}/${locale}</link>
+  </image>
   ${tools?.map((tool) => `
     <item>
       <title><![CDATA[${escapeXml(tool.title)}]]></title>
-      <link>${escapeXml(baseUrl)}/${locale}/ai/${escapeXml(tool.name)}</link>
-      <guid isPermaLink="true">${escapeXml(baseUrl)}/${locale}/ai/${escapeXml(tool.name)}</guid>
+      <link>${escapeXml(BASE_URL)}/${locale}/ai/${escapeXml(tool.name)}</link>
+      <guid isPermaLink="true">${escapeXml(BASE_URL)}/${locale}/ai/${escapeXml(tool.name)}</guid>
       <description><![CDATA[${escapeXml(tool.content)}]]></description>
+      <content:encoded><![CDATA[${escapeXml(tool.detail || tool.content)}]]></content:encoded>
+      <dc:creator>AISecKit</dc:creator>
       <pubDate>${new Date(tool.collection_time).toUTCString()}</pubDate>
       ${tool.category_name ? `<category>${escapeXml(tool.category_name)}</category>` : ""}
       ${tool.tag_name ? `<category>${escapeXml(tool.tag_name)}</category>` : ""}
+      ${tool.image_url ? `
+      <media:content 
+        url="${escapeXml(tool.image_url)}"
+        medium="image"
+        type="image/jpeg"
+      />` : ""}
+      ${tool.thumbnail_url ? `
+      <media:thumbnail 
+        url="${escapeXml(tool.thumbnail_url)}"
+      />` : ""}
     </item>
   `).join("")}
 </channel>
@@ -59,7 +82,7 @@ export async function GET(request: Request) {
 
   return new Response(rss, {
     headers: {
-      "Content-Type": "application/xml",
+      "Content-Type": "application/xml; charset=utf-8",
       "Cache-Control": "public, s-maxage=1200, stale-while-revalidate=600",
     },
   });
